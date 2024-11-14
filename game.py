@@ -16,19 +16,40 @@ def make_board(rows, columns):
     >>> board = make_board(rows_example_one, columns_example_one)
     >>> board
     {(0, 0): 'Start (no difficulty level)'}
-    >>> rows_example_two = 5
-    >>> columns_example_two = 5
+    >>> rows_example_two = 2
+    >>> columns_example_two = 2
     >>> board = make_board(rows_example_two, columns_example_two)
     >>> board
-    {
-        (0, 0): 'Start (no difficulty level)', (0, 1): 'Easy', (0, 2): 'Easy', (0, 3): 'Easy', (0, 4): 'Medium',
-        (1, 0): 'Easy', (1, 1): 'Easy', (1, 2): 'Easy', (1, 3): 'Medium', (1, 4): 'Hard',
-        (2, 0): 'Easy', (2, 1): 'Easy', (2, 2): 'Medium', (2, 3): 'Medium', (2, 4): 'Hard',
-        (3, 0): 'Medium', (3, 1): 'Medium', (3, 2): 'Medium', (3, 3): 'Hard', (3, 4): 'Very Hard',
-        (4, 0): 'Medium', (4, 1): 'Medium', (4, 2): 'Hard', (4, 3): 'Very hard', (4, 4): 'Final Boss',
-    }
+    {(0, 0): 'Start (no difficulty level)', (0, 1): 'Easy', (1, 0): 'Easy', (1, 1): 'Easy'}
     """
-    pass
+    board_dictionary = {}
+    board_difficulty_levels_list = ['Start (no difficulty level)', 'Easy', 'Medium', 'Hard', 'Very Hard', 'Final Boss']
+
+    for row_coordinate in range(rows):
+        for column_coordinate in range(columns):
+            if row_coordinate == 0 and column_coordinate == 0:
+                board_dictionary[(row_coordinate, column_coordinate)] = board_difficulty_levels_list[0]
+            elif (row_coordinate == 0 and column_coordinate <= 3) \
+                    or (row_coordinate == 1 and column_coordinate <= 2) \
+                    or (row_coordinate == 2 and column_coordinate <= 1):
+                board_dictionary[(row_coordinate, column_coordinate)] = board_difficulty_levels_list[1]
+            elif (row_coordinate == 0 and column_coordinate == 4) \
+                    or (row_coordinate == 1 and column_coordinate == 3) \
+                    or (row_coordinate == 2 and 2 <= column_coordinate <= 3) \
+                    or (row_coordinate == 3 and column_coordinate <= 2) \
+                    or (row_coordinate == 4 and column_coordinate <= 1):
+                board_dictionary[(row_coordinate, column_coordinate)] = board_difficulty_levels_list[2]
+            elif (row_coordinate <= 2 and column_coordinate == 4) \
+                    or (row_coordinate == 3 and column_coordinate == 3) \
+                    or (row_coordinate == 4 and column_coordinate == 2):
+                board_dictionary[(row_coordinate, column_coordinate)] = board_difficulty_levels_list[3]
+            elif (row_coordinate == 3 and column_coordinate == 4) \
+                    or (row_coordinate == 4 and column_coordinate == 3):
+                board_dictionary[(row_coordinate, column_coordinate)] = board_difficulty_levels_list[4]
+            elif row_coordinate == 4 and column_coordinate == 4:
+                board_dictionary[(row_coordinate, column_coordinate)] = board_difficulty_levels_list[5]
+
+    return board_dictionary
 
 
 def game():  # called from main
