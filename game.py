@@ -54,6 +54,16 @@ def make_board(rows, columns):
     return board_dictionary
 
 
+def make_character():
+    """
+    Create a character for the game at the starting coordinate.
+
+    :return: a dictionary with the following key-pair coordinates:
+    "X-coordinate": 0, "Y-coordinate": 0, "Current HP": 5, "Level": 1, "XP": 0
+    """
+    pass
+
+
 def game():  # called from main
     """
     Play the game.
