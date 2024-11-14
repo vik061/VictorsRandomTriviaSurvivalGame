@@ -35,7 +35,7 @@ class Test(TestCase):
             (1, 0): 'Easy', (1, 1): 'Easy', (1, 2): 'Easy', (1, 3): 'Medium', (1, 4): 'Hard',
             (2, 0): 'Easy', (2, 1): 'Easy', (2, 2): 'Medium', (2, 3): 'Medium', (2, 4): 'Hard',
             (3, 0): 'Medium', (3, 1): 'Medium', (3, 2): 'Medium', (3, 3): 'Hard', (3, 4): 'Very Hard',
-            (4, 0): 'Medium', (4, 1): 'Medium', (4, 2): 'Hard', (4, 3): 'Very hard', (4, 4): 'Final Boss',
+            (4, 0): 'Medium', (4, 1): 'Medium', (4, 2): 'Hard', (4, 3): 'Very Hard', (4, 4): 'Final Boss',
         }
         rows = 5
         columns = 5
