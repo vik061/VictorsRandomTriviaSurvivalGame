@@ -60,6 +60,10 @@ def make_character():
 
     :return: a dictionary with the following key-pair coordinates:
     "X-coordinate": 0, "Y-coordinate": 0, "Current HP": 5, "Level": 1, "XP": 0
+
+    >>> player = make_character()
+    >>> player
+    {"X-coordinate": 0, "Y-coordinate": 0, "Current HP": 5, "Level": 1, "XP": 0}
     """
     pass
 
