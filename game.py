@@ -63,9 +63,9 @@ def make_character():
 
     >>> player = make_character()
     >>> player
-    {"X-coordinate": 0, "Y-coordinate": 0, "Current HP": 5, "Level": 1, "XP": 0}
+    {'X-coordinate': 0, 'Y-coordinate': 0, 'Current HP': 5, 'Level': 1, 'XP': 0}
     """
-    pass
+    return {"X-coordinate": 0, "Y-coordinate": 0, "Current HP": 5, "Level": 1, "XP": 0}
 
 
 def game():  # called from main
