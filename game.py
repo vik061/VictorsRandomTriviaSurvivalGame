@@ -3,10 +3,12 @@ def make_board(rows, columns):
     Create a game board with the given number of rows and columns.
 
     Each coordinate on the board has a string describing the difficulty level.
+    For my game, assume that the game board will have 5 rows and 5 columns.
 
     :param rows: an integer
     :param columns: an integer
     :precondition: rows and columns must be positive non-zero integers
+    :precondition: for the purpose of my game, rows and columns must be less than or equal to five
     :postcondition: create a game board with the given number of rows and columns
     :return: a dictionary with each key as a tuple with a set of coordinates, and
     each value as a short string description of the difficulty level
