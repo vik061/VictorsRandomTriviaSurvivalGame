@@ -68,6 +68,19 @@ def make_character():
     return {"X-coordinate": 0, "Y-coordinate": 0, "Current HP": 5, "Level": 1, "XP": 0}
 
 
+def describe_current_location(board, character):
+    """
+    Describe the current location of the character on the board.
+
+    :param board: a dictionary
+    :param character: a dictionary
+    :precondition: character's X- and Y-coordinates are within the board's range of values
+    :postcondition: describe the current location of the character on the board
+    :return: a string with a short description of the character's current location on the board
+    """
+    pass
+
+
 def game():  # called from main
     """
     Play the game.
