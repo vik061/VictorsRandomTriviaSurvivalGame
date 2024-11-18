@@ -87,7 +87,7 @@ def describe_current_location(board, character):
     >>> describe_current_location(board_example_one, character_example_one)
     'Very Hard'
     """
-    pass
+    print(board[character["X-coordinate"], character["Y-coordinate"]])
 
 
 def game():  # called from main
