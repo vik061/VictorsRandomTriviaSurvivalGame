@@ -90,6 +90,16 @@ def describe_current_location(board, character):
     print(board[character["X-coordinate"], character["Y-coordinate"]])
 
 
+def get_user_choice():
+    """
+    Get the player's inputted direction choice from a printed dictionary of directions.
+
+    The player gets a printed warning message if they input an invalid direction choice.
+
+    :return: a string with the player's valid inputted direction choice
+    """
+
+
 def game():  # called from main
     """
     Play the game.
