@@ -164,7 +164,16 @@ def move_character(character):
     ("Up", "Down", "Right", "Left")
     :postcondition: update the character's X- or Y- coordinate according to the player's direction
     """
-    pass
+    if character['Direction'] == "Up":
+        character['Y-coordinate'] -= 1
+    elif character['Direction'] == "Down":
+        character['Y-coordinate'] += 1
+    elif character['Direction'] == "Right":
+        character['X-coordinate'] += 1
+    elif character['Direction'] == "Left":
+        character['X-coordinate'] -= 1
+
+    del character['Direction']
 
 
 def game():  # called from main
