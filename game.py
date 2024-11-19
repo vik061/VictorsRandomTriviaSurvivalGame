@@ -98,12 +98,27 @@ def get_user_choice():
 
     :return: a string with the player's valid inputted direction choice
     """
+    directions_dict = {1: 'Up', 2: 'Down', 3: 'Left', 4: 'Right'}
+    print(directions_dict)
+
+    while True:
+        try:
+            user_choice = int(input("Enter a direction: "))
+            if user_choice in directions_dict:
+                return directions_dict[user_choice]
+            else:
+                raise ValueError
+        except ValueError:
+            print("Not a valid direction. Enter a valid direction from the directions dictionary.\n")
+            print(directions_dict)
+            continue
 
 
 def game():  # called from main
     """
     Play the game.
     """
+    get_user_choice()
     # template of game(), will change as I implement more functions
     # rows = 5
     # columns = 5
