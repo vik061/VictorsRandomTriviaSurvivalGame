@@ -127,6 +127,17 @@ def validate_move(board, character, direction):
     :precondition: direction is either "Up", "Down", "Left" or "Right"
     :postcondition: check whether the player's direction is a valid move
     :return: a Boolean value asserting the player's move on the board
+
+    >>> board_example_one = make_board(5, 5)
+    >>> character_example_one = {'X-coordinate': 0, 'Y-coordinate': 0, 'Current HP': 5, 'Level': 1, 'XP': 0}
+    >>> direction_example_one = "Up"
+    >>> validate_move(board_example_one, character_example_one, direction_example_one)
+    False
+    >>> board_example_one = make_board(5, 5)
+    >>> character_example_one = {'X-coordinate': 3, 'Y-coordinate': 3, 'Current HP': 5, 'Level': 1, 'XP': 0}
+    >>> direction_example_one = "Down"
+    >>> validate_move(board_example_one, character_example_one, direction_example_one)
+    True
     """
     pass
 
