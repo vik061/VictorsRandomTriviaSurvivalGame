@@ -135,18 +135,21 @@ def validate_move(board, character, direction):
     False
     >>> board_example_one = make_board(5, 5)
     >>> character_example_one = {'X-coordinate': 3, 'Y-coordinate': 3, 'Current HP': 5, 'Level': 1, 'XP': 0}
-    >>> direction_example_one = "Down"
+    >>> direction_example_one = "Right"
     >>> validate_move(board_example_one, character_example_one, direction_example_one)
     True
     """
     board_coordinates = board.keys()
     max_board_coordinates = max(board_coordinates)
 
-    return False if (direction == "Up" and character["Y-coordinate"] == 0) \
-        or (direction == "Down" and character["Y-coordinate"] == max_board_coordinates[1]) \
-        or (direction == "Right" and character["X-coordinate"] == max_board_coordinates[0]) \
-        or (direction == "Left" and character["X-coordinate"] == 0) \
-        else True
+    if (direction == "Up" and character["Y-coordinate"] == 0) \
+            or (direction == "Down" and character["Y-coordinate"] == max_board_coordinates[1]) \
+            or (direction == "Right" and character["X-coordinate"] == max_board_coordinates[0]) \
+            or (direction == "Left" and character["X-coordinate"] == 0):
+        return False
+
+    character['Direction'] = direction
+    return True
 
 
 def game():  # called from main
