@@ -139,7 +139,14 @@ def validate_move(board, character, direction):
     >>> validate_move(board_example_one, character_example_one, direction_example_one)
     True
     """
-    pass
+    board_coordinates = board.keys()
+    max_board_coordinates = max(board_coordinates)
+
+    return False if (direction == "Up" and character["Y-coordinate"] == 0) \
+        or (direction == "Down" and character["Y-coordinate"] == max_board_coordinates[1]) \
+        or (direction == "Right" and character["X-coordinate"] == max_board_coordinates[0]) \
+        or (direction == "Left" and character["X-coordinate"] == 0) \
+        else True
 
 
 def game():  # called from main
