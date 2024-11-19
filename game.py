@@ -152,11 +152,25 @@ def validate_move(board, character, direction):
     return True
 
 
+def move_character(character):
+    """
+    Update the character's X- or Y- coordinate according to the player's valid direction.
+
+    In other words, move the player's character in a valid direction to a different coordinate.
+
+    :param character: a dictionary
+    :precondition: character has a valid 'X-coordinate' and 'Y-coordinate' key value pair
+    :precondition: character has a 'Direction' key with a value consisting of one of the four valid directions
+    ("Up", "Down", "Right", "Left")
+    :postcondition: update the character's X- or Y- coordinate according to the player's direction
+    """
+    pass
+
+
 def game():  # called from main
     """
     Play the game.
     """
-    get_user_choice()
     # template of game(), will change as I implement more functions
     # rows = 5
     # columns = 5
