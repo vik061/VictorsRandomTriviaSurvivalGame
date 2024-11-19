@@ -47,7 +47,7 @@ class Test(TestCase):
     def test_validate_move_false_direction_down(self):
         expected = False
         board = make_board(5, 5)
-        character = {'X-coordinate': 4, 'Y-coordinate': 0, 'Current HP': 5, 'Level': 1, 'XP': 0}
+        character = {'X-coordinate': 0, 'Y-coordinate': 4, 'Current HP': 5, 'Level': 1, 'XP': 0}
         direction = "Down"
         actual = validate_move(board, character, direction)
         self.assertEqual(expected, actual)
@@ -55,7 +55,7 @@ class Test(TestCase):
     def test_validate_move_false_direction_right(self):
         expected = False
         board = make_board(5, 5)
-        character = {'X-coordinate': 0, 'Y-coordinate': 4, 'Current HP': 5, 'Level': 1, 'XP': 0}
+        character = {'X-coordinate': 4, 'Y-coordinate': 0, 'Current HP': 5, 'Level': 1, 'XP': 0}
         direction = "Up"
         actual = validate_move(board, character, direction)
         self.assertEqual(expected, actual)
