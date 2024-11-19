@@ -114,6 +114,23 @@ def get_user_choice():
             continue
 
 
+def validate_move(board, character, direction):
+    """
+    Check whether the player's direction is a valid move.
+
+    Check if the player's direction goes outside the board based on their character's current coordinates.
+
+    :param board: a dictionary
+    :param character: a dictionary
+    :param direction: a string
+    :precondition: character has valid X- and Y-coordinates
+    :precondition: direction is either "Up", "Down", "Left" or "Right"
+    :postcondition: check whether the player's direction is a valid move
+    :return: a Boolean value asserting the player's move on the board
+    """
+    pass
+
+
 def game():  # called from main
     """
     Play the game.
