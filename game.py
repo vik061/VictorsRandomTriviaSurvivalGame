@@ -176,6 +176,14 @@ def move_character(character):
     del character['Direction']
 
 
+def trivia_topics():
+    """
+    Group trivia topics into a difficulty level list and compile each difficulty list into one compiled list.
+
+    :return: a list of the compiled trivia topics grouped by difficulty level
+    """
+
+
 def game():  # called from main
     """
     Play the game.
