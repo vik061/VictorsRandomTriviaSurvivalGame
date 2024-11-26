@@ -181,6 +181,7 @@ def game():  # called from main
     Play the game.
     """
     # template of game(), will change as I implement more functions
+    # print("Welcome to Victor's game!\n Instructions go here.\n")
     # rows = 5
     # columns = 5
     # board = make_board(rows, columns)
@@ -193,22 +194,21 @@ def game():  # called from main
     #     valid_move = validate_move(board, character, direction)
     #     if valid_move:
     #         move_character(character)
-    #         describe_current_location(board, character)
+    #         trivia_level = describe_current_location(board, character)
     #         print("")
-    #         there_is_a_challenger = check_for_foes()
-    #         if there_is_a_challenger:
-    #             guessing_game(character)
-    #         achieved_goal = check_if_goal_attained(board, character)
+    #         trivia_topics() # gather trivia topics
+    #         choose_trivia_topic()
+    #         trivia_question()
+    #       achieved_goal = check_if_goal_attained(board, character)
     #     else:
     #         # Tell the user they can’t go in that direction
     #         print("Not a valid move. You are going out of the game board!\n")
-    #
+
     #     # Print end of game stuff like congratulations or sorry you died
     # if character['Current HP'] == 0:
     #     print("You have no HP left. Game over.")
     # else:
-    #     print("Congratulations! You have completed the game!")
-    pass
+    #     print("Congratulations! You completed Victor's Random Trivia Survival Game! Thanks for playing!")
 
 
 def main():
