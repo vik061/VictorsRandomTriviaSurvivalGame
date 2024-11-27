@@ -91,7 +91,7 @@ def describe_current_location(board, character):
     Very Hard
     """
     current_location = board[character["X-coordinate"], character["Y-coordinate"]]
-    print(current_location)
+    print("\n" + current_location)
 
     return current_location
 
