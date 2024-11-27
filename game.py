@@ -534,12 +534,23 @@ def is_level_up(character):
 
     >>> character_example_one = {"X-coordinate": 1, "Y-coordinate": 1, "Current HP": 5, "Level": 1, "XP": 2}
     >>> is_level_up(character_example_one)
+    Your character has levelled up to Level 2!
     True
     >>> character_example_two = {"X-coordinate": 1, "Y-coordinate": 1, "Current HP": 5, "Level": 1, "XP": 1}
     >>> is_level_up(character_example_two)
     False
     """
-    pass
+    if character['Level'] == 1 and character['XP'] == 2:
+        print("Your character has levelled up to Level 2!")
+        character['Level'] = 2
+        character['XP'] = 0
+        return True
+    elif character['Level'] == 2 and character['XP'] == 3:
+        print("Your character has levelled up to Level 3!")
+        character['Level'] = 3
+        character['XP'] = 0
+        return True
+    return False
 
 
 def game():  # called from main
