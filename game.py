@@ -470,6 +470,21 @@ def trivia_question(topic, character):
     return character
 
 
+def check_if_goal_attained(board, character):
+    """
+    Determine if character made it to the end of the board with at least 1 HP or more.
+
+    Essentially, check if character is in (rows - 1, columns - 1) with "Current HP" value greater than or equal to 1.
+
+    :param board: a dictionary
+    :param character: a dictionary
+    :precondition: board must have valid X- and Y-coordinates stored as tuples
+    :precondition: character has "X-coordinate", "Y-coordinate", and "Current HP" keys with integer values
+    :postcondition: determine if character made it to the end of the board with at least 1 HP or more
+    :return: a Boolean value indicating if character has attained the goal of finishing the game
+    """
+
+
 def game():  # called from main
     """
     Play the game.
