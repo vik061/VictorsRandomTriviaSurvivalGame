@@ -1,3 +1,6 @@
+import random
+
+
 def make_board(rows, columns):
     """
     Create a game board with the given number of rows and columns.
@@ -182,6 +185,210 @@ def trivia_topics():
 
     :return: a list of the compiled trivia topics grouped by difficulty level
     """
+    random_letter = [random.choice(['a', 'b', 'c']), "Guess a random letter: choices are 'a', 'b', 'c', 'd', 'e'.\n",
+                     "Level 2 Hint: the correct answer is not 'd'.\n",
+                     "Level 3 Hint: the correct answer is not 'e' or 'd'.\n"]
+
+    ag_members = [{'b', 'B'},
+                  ("Atarashii Gakko! is a Japanese girl group with four members.What are the names of each member?\n"
+                   "a. Mizu, Rina, Shizuka, Kannon\n"
+                   "b. Mizyu, Rin, Suzuka, Kanon\n"
+                   "c. Miziu, Rinn, Suezuka, Kanon\n"
+                   "d. Miyzu, Rinna, Shuzuka, Kahnon\n "
+                   ), "Level 2 Hint: the correct answer is not d\n",
+                  "Level 3 Hint: the correct answers are not d nor c\n"]
+
+    instruments = [{'t', 'T'},
+                   "Choose T (True) or F (False) for the following statement:\nI can play the piano, clarinet, "
+                   "and tenor saxophone.\n",
+                   "Level 2 Hint: I learned to play the piano first, and the music skills I learned from playing the "
+                   "piano can be transferred to other instruments.\n",
+                   "Level 3 Hint: I played in my high school’s concert and jazz band. There’s a good chance I played "
+                   "the instruments mentioned in the True/False statement.\n"]
+
+    figure_skating = [{'t', 'T'},
+                      "Choose T (True) or F (False) for the following statement:\nI am a Canadian national medalist "
+                      "in the pairs discipline in figure skating.\n",
+                      "Level 2 Hint: I used to be a competitive figure skater in the singles and pairs discipline in "
+                      "Canada.\n",
+                      "Level 3 Hint: You can find my name in Wikipedia’s “Canadian Figure Skating Championships”. "
+                      "It’s up to you to find which year, assuming that this hint is telling you the truth ;) \n"]
+
+    free_pass = ['1',
+                 "You moved to a very easy space! Guess a number between 1 and 1 inclusive and move on with my "
+                 "game!\n",
+                 "Level 2 Hint: Keep it simple. Less overthinking, more simplicity.\n",
+                 "Level 3 Hint: Just enter 1 for your input. Please, enter 1\n"]
+
+    soil = [{'f', 'F'},
+            "Choose T (True) or F (False) for the following statement:\nSoil is the same thing as dirt.\n",
+            "Level 2 Hint: Think about where you find soil versus dirt.\n",
+            "Level 3 Hint: Soil is a natural layer of earth often found with living plants and organisms. Does dirt "
+            "have all the same features as soil?\n"]
+
+    twice = [{'d', 'D'},
+             ("In which city/cities did K-pop girl group TWICE film their music video for “Likey”?\n"
+              "a. Vancouver\n"
+              "b. Richmond\n"
+              "c. White Rock\n"
+              "d. All of the above\n "
+              ),
+             "Level 2 Hint: TWICE did film their music video in Vancouver, BC, but is that the only “city”?\n",
+             "Level 3 Hint: TWICE did film a part of their music video in Steveston. If you know where Steveston is, "
+             "you might as well have the answer to this question.\n"]
+
+    python = [{'t', 'T'},
+              "Choose T (True) or F (False) for the following statement:\nPython is a dynamically typed language.\n",
+              "Level 2 Hint: Think about the “+” operator in Python. What can it do? Is it restricted to only one "
+              "data type?\n",
+              "Level 3 Hint: If we have a program with two variables, a, and b, and we do a + b, do we have to "
+              "declare the data type before each variable before running the program in Python?\n"]
+
+    countries = [{'a', 'A'},
+                 ("Which country have I yet to visit (as of November 2024)?\n"
+                  "a. Belgium\n"
+                  "b. Russia\n"
+                  "c. South Korea\n"
+                  "d. Vatican City\n "
+                  ),
+                 "Level 2 Hint: I visited Vatican City while I was travelling in Italy in the early 2010s.\n",
+                 "Level 3 Hint: I visited Vatican City in the early 2010s and South Korea in August 2024.\n"]
+
+    bc_team = ['4',
+               "Final Boss question: How many times have I been included in the BC/YK provincial team in figure "
+               "skating?\n Enter an integer (if you don’t know the answer, enter your best integer guess).\n",
+               "Level 2 Hint: The number is between 1 and 5 inclusive.\n",
+               "Level 3 Hint: The number is between 2 and 4 inclusive.\n"]
+
+    itzy = [{'f', 'F'},
+            "Choose T (True) or F (False) for the following statement:\nJust like the number of letters in ITZY, "
+            "a K-pop girl group, ITZY currently has 4 members as of November 2024.\n",
+            "Level 2 Hint: ITZY has a few songs with “(Final Version)” after the song title. Could this be related to "
+            "the number of members at different times?\n",
+            "Level 3 Hint: ITZY had a fan meeting in Seoul in early November 2024. How many members can be seen on "
+            "the promotional posters of this fan meeting?\n"]
+
+    food = [{'a', 'A'},
+            ("What is my favourite food?\n"
+             "a. Sushi\n"
+             "b. Sashimi (fresh raw fish or meat)\n"
+             "c. Shawarma\n"
+             "d. None of the above\n"
+             ),
+            "Level 2 Hint: I enjoy one of the foods mentioned above. In other words, the correct answer is not d.\n",
+            "Level 3 Hint: The correct answer is not d. As of November 2024, sashimi is not my favourite food. It "
+            "makes my stomach upset :( \n"]
+
+    translation = ['pizza',
+                   "Translate the English word “pizza” to Danish using lowercase letters only.\n",
+                   "Level 2 Hint: Try not to overthink and keep it simple! Other languages have very similar or the "
+                   "same words as pizza.\n",
+                   "Level 3 Hint: “Pizza” is also called “pizza” in other languages, such as French, Italian ("
+                   "obviously), and Swedish.\n"]
+
+    provinces = [{'d', 'D'},
+                 ("Which Canadian province(s) have I not visited as of November 2024?\n"
+                  "a. Quebec\n"
+                  "b. Saskatchewan\n"
+                  "c. Both a and b\n"
+                  "d. None of the above\n"
+                  ),
+                 "Level 2 Hint: The correct answer is not c.\n",
+                 "Level 3 Hint: I have been to Quebec for a national level figure skating competition. In other words, "
+                 "the incorrect answers are a and c\n"]
+
+    forest_fires = [{'t', 'T'},
+                    "Choose T (True) or F (False) for the following statement:\nRegarding long-term forest health, "
+                    "it’s better to have no fires in forests instead of doing prescribed (controlled) burns.\n",
+                    "Level 2 Hint: Think about what would happen if a forest had a big fire in the future. Would the "
+                    "forest with no past fires have less area destroyed than the forest with prescribed burn?\n",
+                    "Level 3 Hint: Forests with longer gaps between fires usually do way worse when there’s a future "
+                    "forest fire because their (plant) species have not developed the proper resilience to fire.\n"]
+
+    hockey = [{'f', 'F'},
+              "Choose T (True) or F (False) for the following statement:\nAs the first part of the team name "
+              "suggests, the WHL hockey team “Vancouver Giants” is playing in the City of Vancouver as of November "
+              "2024.\n",
+              "Level 2 Hint: The Vancouver Giants play in Metro Vancouver.\n",
+              "Level 3 Hint:  The Vancouver Giants used to play at the Pacific Coliseum in Vancouver. Emphasis on "
+              "“used to.”\n"]
+
+    le_sserafim = [{'b', 'B'},
+                   (
+                       "Le Sserafim is a (formerly six) five-member K-pop girl group under Source Music, a subsidiary "
+                       "of which entertainment company?\n"
+                       "a. JYP Entertainment\n"
+                       "b. HYBE Corporation\n"
+                       "c. SM Entertainment\n"
+                       "d. YG Entertainment\n"
+                   ),
+                   "Level 2 Hint: Le Sserafim is not associated with JYP Entertainment (a is incorrect).\n",
+                   "Level 3 Hint: Le Sserafim is not associated with JYP Entertainment nor SM Entertainment (a and c "
+                   "are incorrect).\n"]
+
+    stitches = [{'t', 'T'},
+                "Choose T (True) or F (False) for the following statement:\nI had stitches on my leg when I was "
+                "13 years old.\n",
+                "Level 2 Hint: I got three stitches just below my left kneecap, assuming that I’m telling you the "
+                "truth ;)\n",
+                "Level 3 Hint: I can tell you how I got those stitches because I clearly remember the scene on "
+                "that day. I still have a bruise on my leg. Again, assuming that I’m telling you the truth.\n"]
+
+    rick_roll = ['down',
+                 "Enter one word in lowercase only to finish this lyric:\n Never gonna give you up, never gonna let you"
+                 " ____.\n",
+                 "Level 2 Hint: This song was released in 1987 by an English singer, and is now a popular icon for "
+                 "purposely redirecting people to this song’s YouTube video.\n",
+                 "Level 3 Hint: The opposite word for up is …\n"]
+
+    canucks = ['MILLER',
+               "Enter one word IN UPPERCASE ONLY to complete this fan chant/cheer for a specific player on the "
+               "Vancouver Canucks roster as of early November 2024:\n J.! T.! _____!\n",
+               "Level 2 Hint: This player played for other NHL teams such as the Tampa Bay Lightning before being "
+               "traded to the Canucks.\n",
+               "Level 3 Hint: This player wears jersey number 9 for the Canucks as of early November 2024.\n"]
+
+    crows = [{'d', 'D'},
+             ("Which family do crows belong to?\n"
+              "a. Coraciiformes\n"
+              "b. Birdae\n"
+              "c. Laridae\n"
+              "d. Corvidae\n"),
+             "Level 2 Hint: The correct is not Birdae.\n",
+             "Level 3 Hint: The correct answers are not Birdae and Laridae\n"]
+
+    airlines = [{'c', 'C'},
+                ("As of November 2024, which airline company did I fly with at least once??\n"
+                 "a. ITA Airways (Italy)\n"
+                 "b. Korean Air (South Korea)\n"
+                 "c. Aeromexico (Mexico)\n"
+                 "d. British Airways (UK)\n"),
+                "Level 2 Hint: I have never flown with ITA Airways as of November 2024.\n",
+                "Level 3 Hint: I have never flown with ITA Airways nor Korean Air as of November 2024\n"]
+
+    motorcycle = [{'t', 'T'},
+                  "Choose T (True) or F (False) for the following statement:\nI can’t drive a motorcycle.\n",
+                  "Level 2 Hint: I only have one vehicle license.\n",
+                  "Level 3 Hint: I can drive a vehicle with four wheels, but I’m unsure if a two-wheeled car exists. "
+                  "If it exists, I could operate it.\n"]
+
+    favourite_course = [{'t', 'T'},
+                        "Choose T (True) or F (False) for the following statement:\nMy favourite course for Term 1 in "
+                        "BCIT"
+                        "CST at the Downtown Campus is COMP 1510 Programming Methods.\n",
+                        "Level 2 Hint: Which other course lets me program a game using Python!? Not COMP 1537 Web "
+                        "Development!\n",
+                        "Level 3 Hint: This is not a trick question, Chris!\n"]
+
+    easy_list = [free_pass, python, rick_roll, provinces, canucks, food, countries, translation]
+    medium_list = [random_letter, soil, instruments, ag_members, hockey, twice, airlines, figure_skating, motorcycle]
+    hard_list = [crows, itzy, stitches, favourite_course]
+    very_hard_list = [le_sserafim, forest_fires]
+    final_boss_list = [bc_team]
+
+    trivia_list = [easy_list, medium_list, hard_list, very_hard_list, final_boss_list]
+
+    return trivia_list
 
 
 def game():  # called from main
