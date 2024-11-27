@@ -445,6 +445,30 @@ def trivia_question(topic, character):
     :postcondition: display the trivia question (and a hint for Level 2 or 3 character) with user input field
     :return: a dictionary of character with the updated keys and values
     """
+    print(topic[1])
+
+    if character['Level'] == 1:
+        answer = input("Enter your response: ")
+    else:
+        print(topic[character['Level']])
+        answer = input("Enter your response: ")
+    answer = answer.replace(' ', '')
+
+    if answer == "":
+        print(f"Incorrect! The correct answer is {topic[0]}")
+        character['Current HP'] -= 1
+    elif answer in topic[0]:
+        print("Correct!")
+        character['XP'] += 1
+    elif type(topic[0]) is list:
+        print(f"Incorrect! The correct answer is {topic[0][0]}")
+        character['Current HP'] -= 1
+    else:
+        print(f"Incorrect! The correct answer is {topic[0]}")
+        character['Current HP'] -= 1
+
+    print(character)
+    return character
 
 
 def game():  # called from main
