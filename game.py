@@ -402,6 +402,31 @@ def choose_trivia_topic(level):
     :postcondition: choose a trivia topic randomly based on the given level
     :return: a list of the answer, question, and Level 2 and 3 hints of the chosen trivia topic
     """
+    if level == "Easy":
+        easy_trivia_list = trivia_topics()[0]
+        trivia_topic = random.choice(easy_trivia_list)
+        easy_trivia_list.remove(trivia_topic)
+        return trivia_topic
+    elif level == "Medium":
+        medium_trivia_list = trivia_topics()[1]
+        trivia_topic = random.choice(medium_trivia_list)
+        medium_trivia_list.remove(trivia_topic)
+        return trivia_topic
+    elif level == "Hard":
+        hard_trivia_list = trivia_topics()[2]
+        trivia_topic = random.choice(hard_trivia_list)
+        hard_trivia_list.remove(trivia_topic)
+        return trivia_topic
+    elif level == "Very Hard":
+        very_hard_trivia_list = trivia_topics()[3]
+        trivia_topic = random.choice(very_hard_trivia_list)
+        very_hard_trivia_list.remove(trivia_topic)
+        return trivia_topic
+    elif level == "Final Boss":
+        final_boss_trivia_list = trivia_topics()[4]
+        trivia_topic = random.choice(final_boss_trivia_list)
+        final_boss_trivia_list.remove(trivia_topic)
+        return trivia_topic
 
 
 def game():  # called from main
