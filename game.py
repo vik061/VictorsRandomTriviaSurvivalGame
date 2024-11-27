@@ -502,6 +502,18 @@ def check_if_goal_attained(board, character):
     return False
 
 
+def is_alive(character):
+    """
+    Determine whether character is alive with at least 1 HP or more.
+
+    :param character: a dictionary
+    :precondition: character has a "Current HP" key with a positive integer value including 0
+    :postcondition: determine whether character is alive with at least 1 HP or more
+    :return: a Boolean value validating if character is alive or not
+    """
+    pass
+
+
 def game():  # called from main
     """
     Play the game.
