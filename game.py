@@ -510,6 +510,13 @@ def is_alive(character):
     :precondition: character has a "Current HP" key with a positive integer value including 0
     :postcondition: determine whether character is alive with at least 1 HP or more
     :return: a Boolean value validating if character is alive or not
+
+    >>> character_example_one = {"X-coordinate": 1, "Y-coordinate": 1, "Current HP": 5, "Level": 1, "XP": 0}
+    >>> is_alive(character_example_one)
+    True
+    >>> character_example_two = {"X-coordinate": 1, "Y-coordinate": 1, "Current HP": 0, "Level": 1, "XP": 0}
+    >>> is_alive(character_example_two)
+    False
     """
     pass
 
