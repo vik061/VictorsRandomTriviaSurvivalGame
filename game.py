@@ -492,6 +492,14 @@ def check_if_goal_attained(board, character):
     >>> check_if_goal_attained(board_example_one, character_example_one)
     True
     """
+    board_coordinates = board.keys()
+    end_of_x_coordinate = max(board_coordinates)[0]
+    end_of_y_coordinate = max(board_coordinates)[1]
+
+    if (character['X-coordinate'] == end_of_x_coordinate) and (character['Y-coordinate'] == end_of_y_coordinate) \
+            and (character['Current HP'] > 0):
+        return True
+    return False
 
 
 def game():  # called from main
