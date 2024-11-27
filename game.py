@@ -482,6 +482,15 @@ def check_if_goal_attained(board, character):
     :precondition: character has "X-coordinate", "Y-coordinate", and "Current HP" keys with integer values
     :postcondition: determine if character made it to the end of the board with at least 1 HP or more
     :return: a Boolean value indicating if character has attained the goal of finishing the game
+
+    >>> board_example_one = make_board(5, 5)
+    >>> character_example_one = {"X-coordinate": 0, "Y-coordinate": 0, "Current HP": 5, "Level": 1, "XP": 0}
+    >>> check_if_goal_attained(board_example_one, character_example_one)
+    False
+    >>> board_example_one = make_board(5, 5)
+    >>> character_example_one = {"X-coordinate": 4, "Y-coordinate": 4, "Current HP": 5, "Level": 3, "XP": 0}
+    >>> check_if_goal_attained(board_example_one, character_example_one)
+    True
     """
 
 
