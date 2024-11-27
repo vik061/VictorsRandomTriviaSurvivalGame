@@ -521,6 +521,20 @@ def is_alive(character):
     return False if character['Current HP'] == 0 else True
 
 
+def is_level_up(character):
+    """
+    Verify if character can level up.
+
+    Level up character if they meet the level up conditions, else do nothing to character.
+
+    :param character: a dictionary
+    :precondition: character has "Level" and "XP" keys with positive integer values including 0
+    :postcondition: verify if character can level up
+    :return: a Boolean value indicating if character can level up or not
+    """
+    pass
+
+
 def game():  # called from main
     """
     Play the game.
