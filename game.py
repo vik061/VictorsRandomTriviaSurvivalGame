@@ -518,7 +518,7 @@ def is_alive(character):
     >>> is_alive(character_example_two)
     False
     """
-    pass
+    return False if character['Current HP'] == 0 else True
 
 
 def game():  # called from main
