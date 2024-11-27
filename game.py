@@ -523,8 +523,8 @@ def game():  # called from main
     #         trivia_level = describe_current_location(board, character)
     #         print("")
     #         trivia_topics() # gather trivia topics
-    #         choose_trivia_topic()
-    #         trivia_question()
+    #         random_topic = choose_trivia_topic(trivia_level)
+    #         trivia_question(random_topic, character)
     #       achieved_goal = check_if_goal_attained(board, character)
     #     else:
     #         # Tell the user they can’t go in that direction
