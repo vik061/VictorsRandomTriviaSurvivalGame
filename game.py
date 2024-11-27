@@ -189,7 +189,7 @@ def trivia_topics():
                      "Level 2 Hint: the correct answer is not 'd'.\n",
                      "Level 3 Hint: the correct answer is not 'e' or 'd'.\n"]
 
-    ag_members = [{'b', 'B'},
+    ag_members = [['b', 'B'],
                   ("Atarashii Gakko! is a Japanese girl group with four members.What are the names of each member?\n"
                    "a. Mizu, Rina, Shizuka, Kannon\n"
                    "b. Mizyu, Rin, Suzuka, Kanon\n"
@@ -198,7 +198,7 @@ def trivia_topics():
                    ), "Level 2 Hint: the correct answer is not d\n",
                   "Level 3 Hint: the correct answers are not d nor c\n"]
 
-    instruments = [{'t', 'T'},
+    instruments = [['t', 'T'],
                    "Choose T (True) or F (False) for the following statement:\nI can play the piano, clarinet, "
                    "and tenor saxophone.\n",
                    "Level 2 Hint: I learned to play the piano first, and the music skills I learned from playing the "
@@ -206,7 +206,7 @@ def trivia_topics():
                    "Level 3 Hint: I played in my high school’s concert and jazz band. There’s a good chance I played "
                    "the instruments mentioned in the True/False statement.\n"]
 
-    figure_skating = [{'t', 'T'},
+    figure_skating = [['t', 'T'],
                       "Choose T (True) or F (False) for the following statement:\nI am a Canadian national medalist "
                       "in the pairs discipline in figure skating.\n",
                       "Level 2 Hint: I used to be a competitive figure skater in the singles and pairs discipline in "
@@ -220,13 +220,13 @@ def trivia_topics():
                  "Level 2 Hint: Keep it simple. Less overthinking, more simplicity.\n",
                  "Level 3 Hint: Just enter 1 for your input. Please, enter 1\n"]
 
-    soil = [{'f', 'F'},
+    soil = [['f', 'F'],
             "Choose T (True) or F (False) for the following statement:\nSoil is the same thing as dirt.\n",
             "Level 2 Hint: Think about where you find soil versus dirt.\n",
             "Level 3 Hint: Soil is a natural layer of earth often found with living plants and organisms. Does dirt "
             "have all the same features as soil?\n"]
 
-    twice = [{'d', 'D'},
+    twice = [['d', 'D'],
              ("In which city/cities did K-pop girl group TWICE film their music video for “Likey”?\n"
               "a. Vancouver\n"
               "b. Richmond\n"
@@ -237,14 +237,14 @@ def trivia_topics():
              "Level 3 Hint: TWICE did film a part of their music video in Steveston. If you know where Steveston is, "
              "you might as well have the answer to this question.\n"]
 
-    python = [{'t', 'T'},
+    python = [['t', 'T'],
               "Choose T (True) or F (False) for the following statement:\nPython is a dynamically typed language.\n",
               "Level 2 Hint: Think about the “+” operator in Python. What can it do? Is it restricted to only one "
               "data type?\n",
               "Level 3 Hint: If we have a program with two variables, a, and b, and we do a + b, do we have to "
               "declare the data type before each variable before running the program in Python?\n"]
 
-    countries = [{'a', 'A'},
+    countries = [['a', 'A'],
                  ("Which country have I yet to visit (as of November 2024)?\n"
                   "a. Belgium\n"
                   "b. Russia\n"
@@ -260,7 +260,7 @@ def trivia_topics():
                "Level 2 Hint: The number is between 1 and 5 inclusive.\n",
                "Level 3 Hint: The number is between 2 and 4 inclusive.\n"]
 
-    itzy = [{'f', 'F'},
+    itzy = [['f', 'F'],
             "Choose T (True) or F (False) for the following statement:\nJust like the number of letters in ITZY, "
             "a K-pop girl group, ITZY currently has 4 members as of November 2024.\n",
             "Level 2 Hint: ITZY has a few songs with “(Final Version)” after the song title. Could this be related to "
@@ -268,7 +268,7 @@ def trivia_topics():
             "Level 3 Hint: ITZY had a fan meeting in Seoul in early November 2024. How many members can be seen on "
             "the promotional posters of this fan meeting?\n"]
 
-    food = [{'a', 'A'},
+    food = [['a', 'A'],
             ("What is my favourite food?\n"
              "a. Sushi\n"
              "b. Sashimi (fresh raw fish or meat)\n"
@@ -286,7 +286,7 @@ def trivia_topics():
                    "Level 3 Hint: “Pizza” is also called “pizza” in other languages, such as French, Italian ("
                    "obviously), and Swedish.\n"]
 
-    provinces = [{'d', 'D'},
+    provinces = [['d', 'D'],
                  ("Which Canadian province(s) have I not visited as of November 2024?\n"
                   "a. Quebec\n"
                   "b. Saskatchewan\n"
@@ -297,7 +297,7 @@ def trivia_topics():
                  "Level 3 Hint: I have been to Quebec for a national level figure skating competition. In other words, "
                  "the incorrect answers are a and c\n"]
 
-    forest_fires = [{'t', 'T'},
+    forest_fires = [['t', 'T'],
                     "Choose T (True) or F (False) for the following statement:\nRegarding long-term forest health, "
                     "it’s better to have no fires in forests instead of doing prescribed (controlled) burns.\n",
                     "Level 2 Hint: Think about what would happen if a forest had a big fire in the future. Would the "
@@ -305,7 +305,7 @@ def trivia_topics():
                     "Level 3 Hint: Forests with longer gaps between fires usually do way worse when there’s a future "
                     "forest fire because their (plant) species have not developed the proper resilience to fire.\n"]
 
-    hockey = [{'f', 'F'},
+    hockey = [['f', 'F'],
               "Choose T (True) or F (False) for the following statement:\nAs the first part of the team name "
               "suggests, the WHL hockey team “Vancouver Giants” is playing in the City of Vancouver as of November "
               "2024.\n",
@@ -313,7 +313,7 @@ def trivia_topics():
               "Level 3 Hint:  The Vancouver Giants used to play at the Pacific Coliseum in Vancouver. Emphasis on "
               "“used to.”\n"]
 
-    le_sserafim = [{'b', 'B'},
+    le_sserafim = [['b', 'B'],
                    (
                        "Le Sserafim is a (formerly six) five-member K-pop girl group under Source Music, a subsidiary "
                        "of which entertainment company?\n"
@@ -326,7 +326,7 @@ def trivia_topics():
                    "Level 3 Hint: Le Sserafim is not associated with JYP Entertainment nor SM Entertainment (a and c "
                    "are incorrect).\n"]
 
-    stitches = [{'t', 'T'},
+    stitches = [['t', 'T'],
                 "Choose T (True) or F (False) for the following statement:\nI had stitches on my leg when I was "
                 "13 years old.\n",
                 "Level 2 Hint: I got three stitches just below my left kneecap, assuming that I’m telling you the "
@@ -348,7 +348,7 @@ def trivia_topics():
                "traded to the Canucks.\n",
                "Level 3 Hint: This player wears jersey number 9 for the Canucks as of early November 2024.\n"]
 
-    crows = [{'d', 'D'},
+    crows = [['d', 'D'],
              ("Which family do crows belong to?\n"
               "a. Coraciiformes\n"
               "b. Birdae\n"
@@ -357,7 +357,7 @@ def trivia_topics():
              "Level 2 Hint: The correct is not Birdae.\n",
              "Level 3 Hint: The correct answers are not Birdae and Laridae\n"]
 
-    airlines = [{'c', 'C'},
+    airlines = [['c', 'C'],
                 ("As of November 2024, which airline company did I fly with at least once??\n"
                  "a. ITA Airways (Italy)\n"
                  "b. Korean Air (South Korea)\n"
@@ -366,16 +366,15 @@ def trivia_topics():
                 "Level 2 Hint: I have never flown with ITA Airways as of November 2024.\n",
                 "Level 3 Hint: I have never flown with ITA Airways nor Korean Air as of November 2024\n"]
 
-    motorcycle = [{'t', 'T'},
+    motorcycle = [['t', 'T'],
                   "Choose T (True) or F (False) for the following statement:\nI can’t drive a motorcycle.\n",
                   "Level 2 Hint: I only have one vehicle license.\n",
                   "Level 3 Hint: I can drive a vehicle with four wheels, but I’m unsure if a two-wheeled car exists. "
                   "If it exists, I could operate it.\n"]
 
-    favourite_course = [{'t', 'T'},
+    favourite_course = [['t', 'T'],
                         "Choose T (True) or F (False) for the following statement:\nMy favourite course for Term 1 in "
-                        "BCIT"
-                        "CST at the Downtown Campus is COMP 1510 Programming Methods.\n",
+                        "BCIT CST at the Downtown Campus is COMP 1510 Programming Methods.\n",
                         "Level 2 Hint: Which other course lets me program a game using Python!? Not COMP 1537 Web "
                         "Development!\n",
                         "Level 3 Hint: This is not a trick question, Chris!\n"]
