@@ -531,6 +531,13 @@ def is_level_up(character):
     :precondition: character has "Level" and "XP" keys with positive integer values including 0
     :postcondition: verify if character can level up
     :return: a Boolean value indicating if character can level up or not
+
+    >>> character_example_one = {"X-coordinate": 1, "Y-coordinate": 1, "Current HP": 5, "Level": 1, "XP": 2}
+    >>> is_level_up(character_example_one)
+    True
+    >>> character_example_two = {"X-coordinate": 1, "Y-coordinate": 1, "Current HP": 5, "Level": 1, "XP": 1}
+    >>> is_level_up(character_example_two)
+    False
     """
     pass
 
