@@ -391,6 +391,19 @@ def trivia_topics():
     return trivia_list
 
 
+def choose_trivia_topic(level):
+    """
+    Choose a trivia topic randomly based on the given level.
+
+    Remove the chosen trivia topic from the associated level's trivia questions list.
+
+    :param level: a string
+    :precondition: level is either "Easy", "Medium", "Hard", "Very Hard" or "Final Boss"
+    :postcondition: choose a trivia topic randomly based on the given level
+    :return: a list of the answer, question, and Level 2 and 3 hints of the chosen trivia topic
+    """
+
+
 def game():  # called from main
     """
     Play the game.
