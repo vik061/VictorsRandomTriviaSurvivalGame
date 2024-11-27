@@ -79,7 +79,7 @@ def describe_current_location(board, character):
     :param character: a dictionary
     :precondition: character's X- and Y-coordinates are within the board's range of values
     :postcondition: describe the current location of the character on the board
-    :print: a string with a short description of the character's current location on the board
+    :return: a string with a short description of the character's current location on the board
 
     >>> board_example_one = make_board(5, 5)
     >>> character_example_one = make_character()
