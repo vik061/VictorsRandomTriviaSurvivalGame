@@ -84,14 +84,13 @@ def describe_current_location(board, character):
     >>> board_example_one = make_board(5, 5)
     >>> character_example_one = make_character()
     >>> describe_current_location(board_example_one, character_example_one)
-    Start (no difficulty level)
-    >>> board_example_one = make_board(5, 5)
-    >>> character_example_one = {"X-coordinate": 3, "Y-coordinate": 4, "Current HP": 5, "Level": 1, "XP": 0}
-    >>> describe_current_location(board_example_one, character_example_one)
-    Very Hard
+    'Start (no difficulty level)'
+    >>> board_example_two = make_board(5, 5)
+    >>> character_example_two = {"X-coordinate": 3, "Y-coordinate": 4, "Current HP": 5, "Level": 1, "XP": 0}
+    >>> describe_current_location(board_example_two, character_example_two)
+    'Very Hard'
     """
     current_location = board[character["X-coordinate"], character["Y-coordinate"]]
-    print("\n" + current_location)
 
     return current_location
 
