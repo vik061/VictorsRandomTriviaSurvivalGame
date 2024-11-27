@@ -90,7 +90,10 @@ def describe_current_location(board, character):
     >>> describe_current_location(board_example_one, character_example_one)
     Very Hard
     """
-    print(board[character["X-coordinate"], character["Y-coordinate"]])
+    current_location = board[character["X-coordinate"], character["Y-coordinate"]]
+    print(current_location)
+
+    return current_location
 
 
 def get_user_choice():
@@ -558,34 +561,35 @@ def game():  # called from main
     Play the game.
     """
     # template of game(), will change as I implement more functions
-    # print("Welcome to Victor's game!\n Instructions go here.\n")
-    # rows = 5
-    # columns = 5
-    # board = make_board(rows, columns)
-    # character = make_character()
-    # achieved_goal = False
-    # while is_alive(character) and not achieved_goal:
-    #     # Tell the user where they are
-    #     describe_current_location(board, character)
-    #     direction = get_user_choice()
-    #     valid_move = validate_move(board, character, direction)
-    #     if valid_move:
-    #         move_character(character)
-    #         trivia_level = describe_current_location(board, character)
-    #         print("")
-    #         trivia_topics() # gather trivia topics
-    #         random_topic = choose_trivia_topic(trivia_level)
-    #         trivia_question(random_topic, character)
-    #       achieved_goal = check_if_goal_attained(board, character)
-    #     else:
-    #         # Tell the user they can’t go in that direction
-    #         print("Not a valid move. You are going out of the game board!\n")
+    print("Welcome to Victor's game!\n Instructions go here.\n")
+    rows = 5
+    columns = 5
+    board = make_board(rows, columns)
+    character = make_character()
+    achieved_goal = False
+    while is_alive(character) and not achieved_goal:
+        # Tell the user where they are
+        describe_current_location(board, character)
+        direction = get_user_choice()
+        valid_move = validate_move(board, character, direction)
+        if valid_move:
+            move_character(character)
+            trivia_level = describe_current_location(board, character)
+            print("")
+            trivia_topics()  # gather trivia topics
+            random_topic = choose_trivia_topic(trivia_level)
+            trivia_question(random_topic, character)
+            is_level_up(character)
+            achieved_goal = check_if_goal_attained(board, character)
+        else:
+            # Tell the user they can’t go in that direction
+            print("Not a valid move. You are going out of the game board!\n")
 
-    #     # Print end of game stuff like congratulations or sorry you died
-    # if character['Current HP'] == 0:
-    #     print("You have no HP left. Game over.")
-    # else:
-    #     print("Congratulations! You completed Victor's Random Trivia Survival Game! Thanks for playing!")
+        # Print end of game stuff like congratulations or sorry you died
+    if character['Current HP'] == 0:
+        print("You have no HP left. Game over.")
+    else:
+        print("Congratulations! You completed Victor's Random Trivia Survival Game! Thanks for playing!")
 
 
 def main():
