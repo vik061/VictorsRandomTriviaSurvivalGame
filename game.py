@@ -429,6 +429,24 @@ def choose_trivia_topic(level):
         return trivia_topic
 
 
+def trivia_question(topic, character):
+    """
+    Display the trivia question (and a hint for Level 2 or 3 character) for the user to input a response.
+
+    After the player inputs a response, they either gain 1 XP for a correct answer
+    or lose 1 HP for an incorrect answer.
+
+    :param topic: a list
+    :param character: a dictionary
+    :precondition: topic has four index positions, with index 0 being the answer,
+    index 1 being the question, index 2 being the Level 2 Hint, and index 3 being the Level 3 Hint
+    :precondition: character has a "XP" key with positive integer values equal to or greater than 0,
+    and the "Current HP" and "Level" keys have non-zero positive integer values
+    :postcondition: display the trivia question (and a hint for Level 2 or 3 character) with user input field
+    :return: a dictionary of character with the updated keys and values
+    """
+
+
 def game():  # called from main
     """
     Play the game.
