@@ -559,8 +559,7 @@ def game():  # called from main
     """
     Play the game.
     """
-    # template of game(), will change as I implement more functions
-    print("Welcome to Victor's game!\n Instructions go here.\n")
+    print("Welcome to Victor's game!\n Instructions go here.")
     rows = 5
     columns = 5
     board = make_board(rows, columns)
@@ -568,13 +567,13 @@ def game():  # called from main
     achieved_goal = False
     while is_alive(character) and not achieved_goal:
         # Tell the user where they are
-        describe_current_location(board, character)
+        print("\n" + describe_current_location(board, character))
         direction = get_user_choice()
         valid_move = validate_move(board, character, direction)
         if valid_move:
             move_character(character)
             trivia_level = describe_current_location(board, character)
-            print("")
+            print("\n" + trivia_level + "\n")
             trivia_topics()  # gather trivia topics
             random_topic = choose_trivia_topic(trivia_level)
             trivia_question(random_topic, character)
