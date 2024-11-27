@@ -6,7 +6,7 @@ from unittest.mock import patch
 
 
 class Test(TestCase):
-    @patch('random.choice', return_value=[{'d', 'D'},
+    @patch('random.choice', return_value=[['d', 'D'],
                                           ("Which Canadian province(s) have I not visited as of November 2024?\n"
                                            "a. Quebec\n"
                                            "b. Saskatchewan\n"
@@ -17,7 +17,7 @@ class Test(TestCase):
                                           "Level 3 Hint: I have been to Quebec for a national level figure skating "
                                           "competition. In other words, the incorrect answers are a and c\n"])
     def test_choose_trivia_topic_easy_level(self, _):
-        provinces = [{'d', 'D'},
+        provinces = [['d', 'D'],
                      ("Which Canadian province(s) have I not visited as of November 2024?\n"
                       "a. Quebec\n"
                       "b. Saskatchewan\n"
@@ -32,13 +32,14 @@ class Test(TestCase):
         actual = choose_trivia_topic(level)
         self.assertEqual(expected, actual)
 
-    @patch('random.choice', return_value=[{'f', 'F'},
-                                          "Choose T (True) or F (False) for the following statement:\nSoil is the same thing as dirt.\n",
+    @patch('random.choice', return_value=[['f', 'F'],
+                                          "Choose T (True) or F (False) for the following statement:\nSoil is the "
+                                          "same thing as dirt.\n",
                                           "Level 2 Hint: Think about where you find soil versus dirt.\n",
-                                          "Level 3 Hint: Soil is a natural layer of earth often found with living plants and organisms. Does dirt"
-                                          " have all the same features as soil?\n"])
+                                          "Level 3 Hint: Soil is a natural layer of earth often found with living "
+                                          "plants and organisms. Does dirt have all the same features as soil?\n"])
     def test_choose_trivia_topic_medium_level(self, _):
-        soil = [{'f', 'F'},
+        soil = [['f', 'F'],
                 "Choose T (True) or F (False) for the following statement:\nSoil is the same thing as dirt.\n",
                 "Level 2 Hint: Think about where you find soil versus dirt.\n",
                 "Level 3 Hint: Soil is a natural layer of earth often found with living plants and organisms. Does dirt"
@@ -48,7 +49,7 @@ class Test(TestCase):
         actual = choose_trivia_topic(level)
         self.assertEqual(expected, actual)
 
-    @patch('random.choice', return_value=[{'d', 'D'},
+    @patch('random.choice', return_value=[['d', 'D'],
                                           ("Which family do crows belong to?\n"
                                            "a. Coraciiformes\n"
                                            "b. Birdae\n"
@@ -57,7 +58,7 @@ class Test(TestCase):
                                           "Level 2 Hint: The correct is not Birdae.\n",
                                           "Level 3 Hint: The correct answers are not Birdae and Laridae\n"])
     def test_choose_trivia_topic_hard_level(self, _):
-        crows = [{'d', 'D'},
+        crows = [['d', 'D'],
                  ("Which family do crows belong to?\n"
                   "a. Coraciiformes\n"
                   "b. Birdae\n"
@@ -70,20 +71,21 @@ class Test(TestCase):
         actual = choose_trivia_topic(level)
         self.assertEqual(expected, actual)
 
-    @patch('random.choice', return_value=[{'b', 'B'},
+    @patch('random.choice', return_value=[['b', 'B'],
                                           (
-                                                  "Le Sserafim is a (formerly six) five-member K-pop girl group under Source Music, "
-                                                  "a subsidiary of which entertainment company?\n"
-                                                  "a. JYP Entertainment\n"
-                                                  "b. HYBE Corporation\n"
-                                                  "c. SM Entertainment\n"
-                                                  "d. YG Entertainment\n"
+                                          "Le Sserafim is a (formerly six) five-member K-pop girl group under Source "
+                                          "Music, a subsidiary of which entertainment company?\n"
+                                          "a. JYP Entertainment\n"
+                                          "b. HYBE Corporation\n"
+                                          "c. SM Entertainment\n"
+                                          "d. YG Entertainment\n"
                                           ),
-                                          "Level 2 Hint: Le Sserafim is not associated with JYP Entertainment (a is incorrect).\n",
-                                          "Level 3 Hint: Le Sserafim is not associated with JYP Entertainment nor SM Entertainment (a "
-                                          "and c are incorrect).\n"])
+                                          "Level 2 Hint: Le Sserafim is not associated with JYP Entertainment (a is "
+                                          "incorrect).\n",
+                                          "Level 3 Hint: Le Sserafim is not associated with JYP Entertainment nor SM "
+                                          "Entertainment (a and c are incorrect).\n"])
     def test_choose_trivia_topic_very_hard_level(self, _):
-        le_sserafim = [{'b', 'B'},
+        le_sserafim = [['b', 'B'],
                        (
                            "Le Sserafim is a (formerly six) five-member K-pop girl group under Source Music, "
                            "a subsidiary of which entertainment company?\n"
