@@ -494,7 +494,7 @@ def trivia_question(topic: list[str | list[str, str], str, str, str], character:
     return character
 
 
-def check_if_goal_attained(board, character):
+def check_if_goal_attained(board: dict[tuple[int, int], str], character: dict[str, int]) -> bool:
     """
     Determine if character made it to the end of the board with at least 1 HP or more.
 
@@ -526,7 +526,7 @@ def check_if_goal_attained(board, character):
     return False
 
 
-def is_alive(character):
+def is_alive(character: dict[str, int]) -> bool:
     """
     Determine whether character is alive with at least 1 HP or more.
 
@@ -545,7 +545,7 @@ def is_alive(character):
     return False if character['Current HP'] == 0 else True
 
 
-def is_level_up(character):
+def is_level_up(character: dict[str, int | str]) -> bool:
     """
     Verify if character can level up.
 
