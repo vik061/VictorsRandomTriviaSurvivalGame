@@ -457,13 +457,10 @@ def trivia_question(topic: list[str | list[str, str], str, str, str], character:
     :return: a dictionary of character with the updated keys and values
     """
     print(topic[1])
-
-    if character['Level'] == 1:
-        answer = input("Enter your response: ")
-    else:
+    if character['Level'] != 1:
         print(topic[character['Level']])
-        answer = input("Enter your response: ")
-    answer = answer.replace(' ', '')
+
+    answer = input("Enter your response: ").replace(' ', '')
 
     if answer == "":
         print(f"Incorrect! The correct answer is {topic[0]}")
