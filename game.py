@@ -92,7 +92,7 @@ def make_character():
     return {"X-coordinate": 0, "Y-coordinate": 0, "Current HP": 5, "Level": 1, "XP": 0}
 
 
-def describe_current_location(board, character):
+def describe_current_location(board: dict[tuple[int, int], str], character: dict[str, int]) -> str:
     """
     Describe the current location of the character on the board.
 
