@@ -413,7 +413,7 @@ def trivia_topics():
     return trivia_list
 
 
-def choose_trivia_topic(level):
+def choose_trivia_topic(level: str) -> list[str | list[str, str], str, str, str]:
     """
     Choose a trivia topic randomly based on the given level.
 
@@ -451,7 +451,8 @@ def choose_trivia_topic(level):
         return trivia_topic
 
 
-def trivia_question(topic, character):
+def trivia_question(topic: list[str | list[str, str], str, str, str], character: dict[str, int | str])\
+        -> dict[str, int | str]:
     """
     Display the trivia question (and a hint for Level 2 or 3 character) for the user to input a response.
 
