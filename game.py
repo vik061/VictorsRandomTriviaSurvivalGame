@@ -140,7 +140,7 @@ def get_user_choice():
             continue
 
 
-def validate_move(board, character, direction):
+def validate_move(board: dict[tuple[int, int], str], character: dict[str, int | str], direction: str) -> bool:
     """
     Check whether the player's direction is a valid move.
 
@@ -178,7 +178,7 @@ def validate_move(board, character, direction):
     return True
 
 
-def move_character(character):
+def move_character(character: dict[str, int | str]) -> None:
     """
     Update the character's X- or Y- coordinate according to the player's valid direction.
 
