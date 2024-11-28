@@ -1,6 +1,14 @@
 import random
 
 
+def print_game_intro_and_instructions():
+    """
+    Print the game introduction and instructions on how to play the game.
+
+    :print: a string of the game introduction and instructions
+    """
+
+
 def make_board(rows: int, columns: int) -> dict[tuple[int, int], str]:
     """
     Create a game board with the given number of rows and columns.
