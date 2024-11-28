@@ -417,38 +417,26 @@ def choose_trivia_topic(level: str) -> list[str | list[str, str], str, str, str]
     """
     Choose a trivia topic randomly based on the given level.
 
-    Remove the chosen trivia topic from the associated level's trivia questions list.
-
     :param level: a string
     :precondition: level is either "Easy", "Medium", "Hard", "Very Hard" or "Final Boss"
     :postcondition: choose a trivia topic randomly based on the given level
     :return: a list of the answer, question, and Level 2 and 3 hints of the chosen trivia topic
     """
+    trivia_list = None
+
     if level == "Easy":
-        easy_trivia_list = trivia_topics()[0]
-        trivia_topic = random.choice(easy_trivia_list)
-        easy_trivia_list.remove(trivia_topic)
-        return trivia_topic
+        trivia_list = trivia_topics()[0]
     elif level == "Medium":
-        medium_trivia_list = trivia_topics()[1]
-        trivia_topic = random.choice(medium_trivia_list)
-        medium_trivia_list.remove(trivia_topic)
-        return trivia_topic
+        trivia_list = trivia_topics()[1]
     elif level == "Hard":
-        hard_trivia_list = trivia_topics()[2]
-        trivia_topic = random.choice(hard_trivia_list)
-        hard_trivia_list.remove(trivia_topic)
-        return trivia_topic
+        trivia_list = trivia_topics()[2]
     elif level == "Very Hard":
-        very_hard_trivia_list = trivia_topics()[3]
-        trivia_topic = random.choice(very_hard_trivia_list)
-        very_hard_trivia_list.remove(trivia_topic)
-        return trivia_topic
+        trivia_list = trivia_topics()[3]
     elif level == "Final Boss":
-        final_boss_trivia_list = trivia_topics()[4]
-        trivia_topic = random.choice(final_boss_trivia_list)
-        final_boss_trivia_list.remove(trivia_topic)
-        return trivia_topic
+        trivia_list = trivia_topics()[4]
+
+    trivia_topic = random.choice(trivia_list)
+    return trivia_topic
 
 
 def trivia_question(topic: list[str | list[str, str], str, str, str], character: dict[str, int | str])\
