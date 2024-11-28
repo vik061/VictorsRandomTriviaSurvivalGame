@@ -1,7 +1,7 @@
 import random
 
 
-def make_board(rows, columns):
+def make_board(rows: int, columns: int) -> dict[tuple[int, int], str]:
     """
     Create a game board with the given number of rows and columns.
 
