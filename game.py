@@ -209,7 +209,7 @@ def move_character(character: dict[str, int | str]) -> None:
     del character['Direction']
 
 
-def trivia_topics():
+def trivia_topics() -> list[list | str, str, str, str]:
     """
     Group trivia topics into a difficulty level list and compile each difficulty list into one compiled list.
 
