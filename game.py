@@ -3,7 +3,7 @@ import random
 import time
 
 
-def print_game_intro_and_instructions():
+def print_game_intro_and_instructions() -> None:
     """
     Print the game introduction and instructions on how to play the game.
 
@@ -85,7 +85,7 @@ def make_board(rows: int, columns: int) -> dict[tuple[int, int], str]:
     return board_dictionary
 
 
-def make_character():
+def make_character() -> dict[str, int]:
     """
     Create a character for the game at the starting coordinate.
 
@@ -123,7 +123,7 @@ def describe_current_location(board: dict[tuple[int, int], str], character: dict
     return current_location
 
 
-def get_user_choice():
+def get_user_choice() -> str:
     """
     Get the player's inputted direction choice from a printed dictionary of directions.
 
@@ -581,13 +581,13 @@ def game():  # called from main
     achieved_goal = False
     while is_alive(character) and not achieved_goal:
         # Tell the user where they are
-        print("\n" + describe_current_location(board, character))
+        print("\nDifficulty: " + describe_current_location(board, character))
         direction = get_user_choice()
         valid_move = validate_move(board, character, direction)
         if valid_move:
             move_character(character)
             trivia_level = describe_current_location(board, character)
-            print("\n" + trivia_level + "\n")
+            print("\nDifficulty: " + trivia_level + "\n")
             trivia_topics()  # gather trivia topics
             random_topic = choose_trivia_topic(trivia_level)
             trivia_question(random_topic, character)
