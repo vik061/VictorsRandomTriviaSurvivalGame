@@ -131,7 +131,7 @@ class Test(TestCase):
         self.assertEqual(expected, actual)
 
     def test_verify_trivia_response_correct_input_final_boss_level(self):
-        expected = {"X-coordinate": 4, "Y-coordinate": 3, "Current HP": 5, "Level": 3, "XP": 1}
+        expected = {"X-coordinate": 4, "Y-coordinate": 4, "Current HP": 5, "Level": 3, "XP": 1}
         response = '4'
         topic = ['4',
                  "Final Boss question: How many times have I been included in the BC/YK provincial team in figure "
@@ -143,7 +143,7 @@ class Test(TestCase):
         self.assertEqual(expected, actual)
 
     def test_verify_trivia_response_incorrect_input_final_boss_level(self):
-        expected = {"X-coordinate": 4, "Y-coordinate": 3, "Current HP": 4, "Level": 3, "XP": 0}
+        expected = {"X-coordinate": 4, "Y-coordinate": 4, "Current HP": 4, "Level": 3, "XP": 0}
         response = '2'
         topic = ['4',
                  "Final Boss question: How many times have I been included in the BC/YK provincial team in figure "
@@ -155,7 +155,7 @@ class Test(TestCase):
         self.assertEqual(expected, actual)
 
     def test_verify_trivia_response_incorrect_input_blank_input(self):
-        expected = {"X-coordinate": 4, "Y-coordinate": 3, "Current HP": 4, "Level": 3, "XP": 0}
+        expected = {"X-coordinate": 4, "Y-coordinate": 4, "Current HP": 4, "Level": 3, "XP": 0}
         response = ''
         topic = ['4',
                  "Final Boss question: How many times have I been included in the BC/YK provincial team in figure "
