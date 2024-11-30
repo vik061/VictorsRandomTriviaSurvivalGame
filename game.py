@@ -487,6 +487,17 @@ def verify_trivia_response(response: str, topic: list[(str | list[str, str]), st
     and the "Current HP" and "Level" keys have non-zero positive integer values
     :postcondition: verify the player's response with the topic's answer at index 0
     :return: a dictionary of character with the updated values
+
+    >>> response_ex_1 = 'd'
+    >>> topic_answer_ex_1 = [['d', 'D'], "question", "level 2 hint", "level 3 hint"]
+    >>> character_ex_1 = {"X-coordinate": 1, "Y-coordinate": 1, "Current HP": 5, "Level": 1, "XP": 0}
+    >>> verify_trivia_response(response_ex_1, topic_answer_ex_1, character_ex_1)
+    {"X-coordinate": 1, "Y-coordinate": 1, "Current HP": 5, "Level": 1, "XP": 1}
+    >>> response_ex_2 = 'c'
+    >>> topic_answer_ex_2 = [['d', 'D'], "question", "level 2 hint", "level 3 hint"]
+    >>> character_ex_2 = {"X-coordinate": 1, "Y-coordinate": 1, "Current HP": 5, "Level": 1, "XP": 0}
+    >>> verify_trivia_response(response_ex_2, topic_answer_ex_2, character_ex_2)
+    {"X-coordinate": 1, "Y-coordinate": 1, "Current HP": 4, "Level": 1, "XP": 1}
     """
 
 # def trivia_question(topic: list[str | list[str, str], str, str, str], character: dict[str, int | str])\
