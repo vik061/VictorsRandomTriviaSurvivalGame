@@ -113,7 +113,7 @@ class Test(TestCase):
         actual = show_trivia_question(topic, character)
         self.assertEqual(expected, actual)
 
-    @patch('builtins.input', return_value='B')
+    @patch('builtins.input', return_value='A')
     def test_show_trivia_question_incorrect_input_very_hard_level(self, _):
         expected = "A"
         topic = [['b', 'B'],
