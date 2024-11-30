@@ -446,44 +446,61 @@ def choose_trivia_topic(level: str) -> list[str | list[str, str], str, str, str]
     return trivia_topic
 
 
-def trivia_question(topic: list[str | list[str, str], str, str, str], character: dict[str, int | str])\
+def show_trivia_question(topic: list[str | list[str, str], str, str, str], character: dict[str, int | str])\
         -> dict[str, int | str]:
     """
-    Display the trivia question (and a hint for Level 2 or 3 character) for the user to input a response.
+    Show the randomly chosen trivia question and allow the user to enter their response.
 
-    After the player inputs a response, they either gain 1 XP for a correct answer
-    or lose 1 HP for an incorrect answer.
+    If character is Level 2 or 3, show the Level 2 or 3 hint after the trivia question respectively.
 
     :param topic: a list
     :param character: a dictionary
     :precondition: topic has four index positions, with index 0 being the answer,
-    index 1 being the question, index 2 being the Level 2 Hint, and index 3 being the Level 3 Hint
-    :precondition: character has a "XP" key with positive integer values equal to or greater than 0,
-    and the "Current HP" and "Level" keys have non-zero positive integer values
-    :postcondition: display the trivia question (and a hint for Level 2 or 3 character) with user input field
-    :return: a dictionary of character with the updated keys and values
+#   index 1 being the question, index 2 being the Level 2 Hint, and index 3 being the Level 3 Hint
+#   :precondition: character has an "XP" key with positive integer values equal to or greater than 0,
+#   and the "Current HP" and "Level" keys have non-zero positive integer values
+#   :postcondition: show the trivia question, response input (and Level 2 or 3 hint if applicable)
+    :return:
     """
-    print(topic[1])
-    if character['Level'] != 1:
-        print(topic[character['Level']])
 
-    answer = input("Enter your response: ").replace(' ', '')
-
-    if answer == "":
-        print(f"Incorrect! The correct answer is {topic[0]}")
-        character['Current HP'] -= 1
-    elif answer in topic[0]:
-        print("Correct!")
-        character['XP'] += 1
-    elif type(topic[0]) is list:
-        print(f"Incorrect! The correct answer is {topic[0][0]}")
-        character['Current HP'] -= 1
-    else:
-        print(f"Incorrect! The correct answer is {topic[0]}")
-        character['Current HP'] -= 1
-
-    print(character)
-    return character
+# def trivia_question(topic: list[str | list[str, str], str, str, str], character: dict[str, int | str])\
+#         -> dict[str, int | str]:
+#     """
+#     Display the trivia question (and a hint for Level 2 or 3 character) for the user to input a response.
+#
+#     After the player inputs a response, they either gain 1 XP for a correct answer
+#     or lose 1 HP for an incorrect answer.
+#
+#     :param topic: a list
+#     :param character: a dictionary
+#     :precondition: topic has four index positions, with index 0 being the answer,
+#     index 1 being the question, index 2 being the Level 2 Hint, and index 3 being the Level 3 Hint
+#     :precondition: character has a "XP" key with positive integer values equal to or greater than 0,
+#     and the "Current HP" and "Level" keys have non-zero positive integer values
+#     :postcondition: display the trivia question (and a hint for Level 2 or 3 character) with user input field
+#     :return: a dictionary of character with the updated keys and values
+#     """
+#     print(topic[1])
+#     if character['Level'] != 1:
+#         print(topic[character['Level']])
+#
+#     answer = input("Enter your response: ").replace(' ', '')
+#
+#     if answer == "":
+#         print(f"Incorrect! The correct answer is {topic[0]}")
+#         character['Current HP'] -= 1
+#     elif answer in topic[0]:
+#         print("Correct!")
+#         character['XP'] += 1
+#     elif type(topic[0]) is list:
+#         print(f"Incorrect! The correct answer is {topic[0][0]}")
+#         character['Current HP'] -= 1
+#     else:
+#         print(f"Incorrect! The correct answer is {topic[0]}")
+#         character['Current HP'] -= 1
+#
+#     print(character)
+#     return character
 
 
 def check_if_goal_attained(board: dict[tuple[int, int], str], character: dict[str, int]) -> bool:
