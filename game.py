@@ -420,7 +420,7 @@ def trivia_topics() -> list[list | str, str, str, str]:
     return trivia_list
 
 
-def choose_trivia_topic(level: str) -> list[str | list[str, str], str, str, str]:
+def choose_trivia_topic(level: str) -> list[(str | list[str, str]), str, str, str]:
     """
     Choose a trivia topic randomly based on the given level.
 
@@ -446,7 +446,7 @@ def choose_trivia_topic(level: str) -> list[str | list[str, str], str, str, str]
     return trivia_topic
 
 
-def show_trivia_question(topic: list[str | list[str, str], str, str, str], character: dict[str, int | str])\
+def show_trivia_question(topic: list[(str | list[str, str]), str, str, str], character: dict[str, int | str])\
         -> str:
     """
     Show the randomly chosen trivia question and allow the user to enter their response.
@@ -472,7 +472,7 @@ def show_trivia_question(topic: list[str | list[str, str], str, str, str], chara
     return response
 
 
-def verify_trivia_response(response: str, topic: list[str | list[str, str], str, str, str], character: dict[str, int]) \
+def verify_trivia_response(response: str, topic: list[(str | list[str, str]), str, str, str], character: dict[str, int]) \
         -> dict[str, int]:
     """
     Verify the player's response with the topic's answer at index 0.
