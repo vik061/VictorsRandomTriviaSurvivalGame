@@ -447,7 +447,7 @@ def choose_trivia_topic(level: str) -> list[str | list[str, str], str, str, str]
 
 
 def show_trivia_question(topic: list[str | list[str, str], str, str, str], character: dict[str, int | str])\
-        -> dict[str, int | str]:
+        -> str:
     """
     Show the randomly chosen trivia question and allow the user to enter their response.
 
@@ -462,7 +462,14 @@ def show_trivia_question(topic: list[str | list[str, str], str, str, str], chara
     :postcondition: show the trivia question, response input (and Level 2 or 3 hint if applicable)
     :return: a string of the player's entered response
     """
-    pass
+    print(topic[1])
+
+    if character['Level'] != 1:
+        print(topic[character['Level']])
+
+    response = input("Enter your response: ").replace(' ', '')
+
+    return response
 
 # def trivia_question(topic: list[str | list[str, str], str, str, str], character: dict[str, int | str])\
 #         -> dict[str, int | str]:
@@ -608,7 +615,9 @@ def game():  # called from main
             print("\nDifficulty: " + trivia_level + "\n")
             trivia_topics()  # gather trivia topics
             random_topic = choose_trivia_topic(trivia_level)
-            trivia_question(random_topic, character)
+            player_response = show_trivia_question(random_topic, character)
+
+            # trivia_question(random_topic, character)
             is_level_up(character)
             achieved_goal = check_if_goal_attained(board, character)
         else:
