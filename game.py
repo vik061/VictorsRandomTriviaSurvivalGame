@@ -1,5 +1,7 @@
 import random
 
+import time
+
 
 def print_game_intro_and_instructions():
     """
@@ -7,19 +9,24 @@ def print_game_intro_and_instructions():
 
     :print: a string of the game introduction and instructions
     """
-    print("\nWelcome to Victor's Random Trivia Survival Game!\n\n"
-          "You may have seen tons of games in a similar format to this, BUT my game has random varieties of "
+    print("\nWelcome to Victor's Random Trivia Survival Game!\n\n")
+    time.sleep(2)
+    print("You may have seen tons of games in a similar format to this, BUT my game has random varieties of "
           "trivia topics, such as my personal life experiences, random choice, and more niche/specific topics. "
           "Each of those topics have difficulty levels anywhere from Easy to Final Boss (almost impossible unless you "
-          "know me very well).\n\n"
-          "For every trivia topic, gain 1 XP every time you answer correctly or lose 1 HP every time you answer "
+          "know me very well).\n\n")
+    time.sleep(8)
+    print("For every trivia topic, gain 1 XP every time you answer correctly or lose 1 HP every time you answer "
           "incorrectly. Get XP to level up your character to Level 2 (need 2 XP in Level 1) and unlock a hint for "
           "every trivia topic. Or even better, level up your character to Level 3 (need 3 XP in Level 2) and unlock an "
-          "exclusive hint for every trivia topic.\n\n"
-          "Your goal is to have your character move from the Start to the end of the 5 by 5 board (X-coordinate = 4, "
+          "exclusive hint for every trivia topic.\n\n")
+    time.sleep(10)
+    print("Your goal is to have your character move from the Start to the end of the 5 by 5 board (X-coordinate = 4, "
           "Y-coordinate = 4) with at least 1 HP or more. If your character's Current HP value reaches 0 before "
-          "completing the Final Boss at the end of the 5 by 5 board, game over :(.\n\n"
-          "Hope you learn something new about a random topic, and have fun!")
+          "completing the Final Boss at the end of the 5 by 5 board, game over :(.\n\n")
+    time.sleep(5)
+    print("Hope you learn something new about a random topic, and have fun!")
+    time.sleep(2)
 
 
 def make_board(rows: int, columns: int) -> dict[tuple[int, int], str]:
