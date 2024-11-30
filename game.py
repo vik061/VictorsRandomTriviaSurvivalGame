@@ -456,12 +456,13 @@ def show_trivia_question(topic: list[str | list[str, str], str, str, str], chara
     :param topic: a list
     :param character: a dictionary
     :precondition: topic has four index positions, with index 0 being the answer,
-#   index 1 being the question, index 2 being the Level 2 Hint, and index 3 being the Level 3 Hint
-#   :precondition: character has an "XP" key with positive integer values equal to or greater than 0,
-#   and the "Current HP" and "Level" keys have non-zero positive integer values
-#   :postcondition: show the trivia question, response input (and Level 2 or 3 hint if applicable)
-    :return:
+    index 1 being the question, index 2 being the Level 2 Hint, and index 3 being the Level 3 Hint
+    :precondition: character has an "XP" key with positive integer values equal to or greater than 0,
+    and the "Current HP" and "Level" keys have non-zero positive integer values
+    :postcondition: show the trivia question, response input (and Level 2 or 3 hint if applicable)
+    :return: a string of the player's entered response
     """
+    pass
 
 # def trivia_question(topic: list[str | list[str, str], str, str, str], character: dict[str, int | str])\
 #         -> dict[str, int | str]:
