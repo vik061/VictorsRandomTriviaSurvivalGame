@@ -471,6 +471,24 @@ def show_trivia_question(topic: list[str | list[str, str], str, str, str], chara
 
     return response
 
+
+def verify_trivia_response(response: str, topic: list[str | list[str, str], str, str, str], character: dict[str, int]) \
+        -> dict[str, int]:
+    """
+    Verify the player's response with the topic's answer at index 0.
+
+    Add 1 XP to character's XP value if response is correct, subtract 1 from character's Current HP value if incorrect.
+
+    :param response: a string
+    :param topic: a list
+    :param character: a dictionary
+    :precondition: topic has the answer at index 0
+    :precondition: character has an "XP" key with positive integer values equal to or greater than 0,
+    and the "Current HP" and "Level" keys have non-zero positive integer values
+    :postcondition: verify the player's response with the topic's answer at index 0
+    :return: a dictionary of character with the updated values
+    """
+
 # def trivia_question(topic: list[str | list[str, str], str, str, str], character: dict[str, int | str])\
 #         -> dict[str, int | str]:
 #     """
