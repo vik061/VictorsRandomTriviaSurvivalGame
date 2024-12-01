@@ -494,13 +494,11 @@ def verify_trivia_response(response: str, topic: list[(str | list[str, str]), st
     >>> verify_trivia_response(response_ex_1, topic_answer_ex_1, character_ex_1)
     Correct!
     {'X-coordinate': 1, 'Y-coordinate': 1, 'Current HP': 5, 'Level': 1, 'XP': 1}
-    {'X-coordinate': 1, 'Y-coordinate': 1, 'Current HP': 5, 'Level': 1, 'XP': 1}
     >>> response_ex_2 = 'c'
     >>> topic_answer_ex_2 = [['d', 'D'], "question", "level 2 hint", "level 3 hint"]
     >>> character_ex_2 = {"X-coordinate": 1, "Y-coordinate": 1, "Current HP": 5, "Level": 1, "XP": 0}
     >>> verify_trivia_response(response_ex_2, topic_answer_ex_2, character_ex_2)
     Incorrect! The correct answer is D.
-    {'X-coordinate': 1, 'Y-coordinate': 1, 'Current HP': 4, 'Level': 1, 'XP': 0}
     {'X-coordinate': 1, 'Y-coordinate': 1, 'Current HP': 4, 'Level': 1, 'XP': 0}
     """
     if type(topic[0]) is list:
@@ -516,7 +514,6 @@ def verify_trivia_response(response: str, topic: list[(str | list[str, str]), st
     else:
         print(f"Incorrect! The correct answer is {topic[0]}")
         character['Current HP'] -= 1
-    print(character)
     return character
 
 
@@ -626,6 +623,7 @@ def game():  # called from main
             random_topic = choose_trivia_topic(trivia_level)
             player_response = show_trivia_question(random_topic, character)
             character = verify_trivia_response(player_response, random_topic, character)
+            print(character)
             is_level_up(character)
             achieved_goal = check_if_goal_attained(board, character)
         else:
