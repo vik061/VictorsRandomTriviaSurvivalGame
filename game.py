@@ -99,6 +99,7 @@ def make_hard_board_coordinates(rows: int, columns: int) -> dict[tuple[int, int]
 
     >>> rows_5 = 5
     >>> columns_5 = 5
+    >>> make_hard_board_coordinates(rows_5, columns_5)
     {(0, 4): 'Hard', (1, 4): 'Hard', (2, 4): 'Hard', (3, 3): 'Hard', (4, 2): 'Hard'}
     """
     pass
