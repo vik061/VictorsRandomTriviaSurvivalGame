@@ -38,6 +38,12 @@ def make_start_and_easy_board_coordinates(rows: int, columns: int) -> dict[tuple
     :precondition: rows and columns are positive non-zero integers
     :postcondition: make the start and easy board coordinates
     :return: a dictionary with the tuple of (row, coordinate) as the key and a string level description as the value
+
+    >>> rows_5 = 5
+    >>> columns_5 = 5
+    >>> make_start_and_easy_board_coordinates(rows_5, columns_5)
+    {(0, 0): 'Start (no difficulty level)', (0, 1): 'Easy', (0, 2): 'Easy', (0, 3): 'Easy', (1, 0): 'Easy', \
+    (1, 1): 'Easy', (1, 2): 'Easy', (2, 0): 'Easy', (2, 1): 'Easy'}
     """
     pass
 
