@@ -161,32 +161,34 @@ def make_final_boss_board_coordinate(rows: int, columns: int) -> dict[tuple[int,
                 final_boss_board_dictionary[(row_coordinate, column_coordinate)] = "Final Boss"
     return final_boss_board_dictionary
 
-# def make_board(rows: int, columns: int) -> dict[tuple[int, int], str]:
-#     """
-#     Create a game board with the given number of rows and columns.
-#
-#     Each coordinate on the board has a string describing the difficulty level.
-#     For my game, assume that the game board will have 5 rows and 5 columns.
-#
-#     :param rows: an integer
-#     :param columns: an integer
-#     :precondition: rows and columns must be positive non-zero integers
-#     :precondition: for the purpose of my game, rows and columns must be less than or equal to five
-#     :postcondition: create a game board with the given number of rows and columns
-#     :return: a dictionary with each key as a tuple with a set of coordinates, and
-#     each value as a short string description of the difficulty level
-#
-#     >>> rows_example_one = 1
-#     >>> columns_example_one = 1
-#     >>> board = make_board(rows_example_one, columns_example_one)
-#     >>> board
-#     {(0, 0): 'Start (no difficulty level)'}
-#     >>> rows_example_two = 2
-#     >>> columns_example_two = 2
-#     >>> board = make_board(rows_example_two, columns_example_two)
-#     >>> board
-#     {(0, 0): 'Start (no difficulty level)', (0, 1): 'Easy', (1, 0): 'Easy', (1, 1): 'Easy'}
-#     """
+
+def make_board(rows: int, columns: int) -> dict[tuple[int, int], str]:
+    """
+    Create a game board with the given number of rows and columns.
+
+    Each coordinate on the board has a string describing the difficulty level.
+    For my game, assume that the game board will have 5 rows and 5 columns.
+
+    :param rows: an integer
+    :param columns: an integer
+    :precondition: rows and columns must be positive non-zero integers
+    :precondition: for the purpose of my game, rows and columns must be less than or equal to five
+    :postcondition: create a game board with the given number of rows and columns
+    :return: a dictionary with each key as a tuple with a set of coordinates, and
+    each value as a short string description of the difficulty level
+
+    >>> rows_5 = 5
+    >>> columns_5 = 5
+    >>> make_board(rows_5, columns_5)
+    {(0, 0): 'Start (no difficulty level)', (0, 1): 'Easy', (0, 2): 'Easy', (0, 3): 'Easy', (1, 0): 'Easy', \
+(1, 1): 'Easy', (1, 2): 'Easy', (2, 0): 'Easy', (2, 1): 'Easy', (0, 4): 'Hard', (1, 3): 'Medium', (2, 2): 'Medium', \
+(2, 3): 'Medium', (3, 0): 'Medium', (3, 1): 'Medium', (3, 2): 'Medium', (4, 0): 'Medium', (4, 1): 'Medium', \
+(1, 4): 'Hard', (2, 4): 'Hard', (3, 3): 'Hard', (4, 2): 'Hard', (3, 4): 'Very Hard', (4, 3): 'Very Hard', \
+(4, 4): 'Final Boss'}
+    """
+    pass
+
+
 #     board_dictionary = {}
 #     board_difficulty_levels_list = ['Start (no difficulty level)', 'Easy', 'Medium', 'Hard', 'Very Hard', 'Final Boss']
 #
@@ -578,7 +580,7 @@ def choose_trivia_topic(level: str) -> list[(str | list[str, str]), str, str, st
     return trivia_topic
 
 
-def show_trivia_question(topic: list[(str | list[str, str]), str, str, str], character: dict[str, int | str])\
+def show_trivia_question(topic: list[(str | list[str, str]), str, str, str], character: dict[str, int | str]) \
         -> str:
     """
     Show the randomly chosen trivia question and allow the user to enter their response.
