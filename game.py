@@ -128,6 +128,14 @@ def make_very_hard_board_coordinates(rows: int, columns: int) -> dict[tuple[int,
     >>> make_very_hard_board_coordinates(rows_5, columns_5)
     {(3, 4): 'Very Hard', (4, 3): 'Very Hard'}
     """
+    very_hard_board_dictionary = {}
+
+    for row_coordinate in range(rows):
+        for column_coordinate in range(columns):
+            if (row_coordinate == 3 and column_coordinate == 4) \
+                    or (row_coordinate == 4 and column_coordinate == 3):
+                very_hard_board_dictionary[(row_coordinate, column_coordinate)] = "Very Hard"
+    return very_hard_board_dictionary
 
 # def make_board(rows: int, columns: int) -> dict[tuple[int, int], str]:
 #     """
