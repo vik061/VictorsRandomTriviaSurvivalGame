@@ -34,7 +34,7 @@ def make_start_and_easy_board_coordinates(rows: int, columns: int) -> dict[tuple
     Make the start and easy board coordinates for the game board.
 
     :param rows: an integer
-    :param columns: an integer
+    :param columns: also an integer
     :precondition: rows and columns are positive non-zero integers
     :postcondition: make the start and easy board coordinates
     :return: a dictionary with the tuple of (row, coordinate) as the key and a string level description as the value
@@ -63,7 +63,7 @@ def make_medium_board_coordinates(rows: int, columns: int) -> dict[tuple[int, in
     Make the medium board coordinates for the game board.
 
     :param rows: an integer
-    :param columns: an integer
+    :param columns: also an integer
     :precondition: rows and columns are positive non-zero integers
     :postcondition: make the medium board coordinates
     :return: a dictionary with the tuple of (row, coordinate) as the key and a string level description as the value
@@ -92,7 +92,7 @@ def make_hard_board_coordinates(rows: int, columns: int) -> dict[tuple[int, int]
     Make the hard board coordinates for the game board.
 
     :param rows: an integer
-    :param columns: an integer
+    :param columns: also an integer
     :precondition: rows and columns are positive non-zero integers
     :postcondition: make the hard board coordinates
     :return: a dictionary with the tuple of (row, coordinate) as the key and a string level description as the value
@@ -118,7 +118,7 @@ def make_very_hard_board_coordinates(rows: int, columns: int) -> dict[tuple[int,
     Make the very hard board coordinates for the game board.
 
     :param rows: an integer
-    :param columns: an integer
+    :param columns: also an integer
     :precondition: rows and columns are positive non-zero integers
     :postcondition: make the very hard board coordinates
     :return: a dictionary with the tuple of (row, coordinate) as the key and a string level description as the value
@@ -143,7 +143,7 @@ def make_final_boss_board_coordinate(rows: int, columns: int) -> dict[tuple[int,
     Make the final boss board coordinate for the game board.
 
     :param rows: an integer
-    :param columns: an integer
+    :param columns: also an integer
     :precondition: rows and columns are positive non-zero integers
     :postcondition: make the final boss board coordinate
     :return: a dictionary with the tuple of (row, coordinate) as the key and a string level description as the value
@@ -170,7 +170,7 @@ def make_board(rows: int, columns: int) -> dict[tuple[int, int], str]:
     For my game, assume that the game board will have 5 rows and 5 columns.
 
     :param rows: an integer
-    :param columns: an integer
+    :param columns: also an integer
     :precondition: rows and columns must be positive non-zero integers
     :precondition: for the purpose of my game, rows and columns must be less than or equal to five
     :postcondition: create a game board with the given number of rows and columns
@@ -211,7 +211,7 @@ def describe_current_location(board: dict[tuple[int, int], str], character: dict
     Describe the current location of the character on the board.
 
     :param board: a dictionary
-    :param character: a dictionary
+    :param character: also a dictionary
     :precondition: character's X- and Y-coordinates are within the board's range of values
     :postcondition: describe the current location of the character on the board
     :return: a string with a short description of the character's current location on the board
@@ -261,7 +261,7 @@ def validate_move(board: dict[tuple[int, int], str], character: dict[str, int | 
     Check if the player's direction goes outside the board based on their character's current coordinates.
 
     :param board: a dictionary
-    :param character: a dictionary
+    :param character: also a dictionary
     :param direction: a string
     :precondition: character has valid X- and Y-coordinates
     :precondition: direction is either "Up", "Down", "Left" or "Right"
@@ -631,11 +631,11 @@ def check_if_goal_attained(board: dict[tuple[int, int], str], character: dict[st
     Essentially, check if character is in (rows - 1, columns - 1) with "Current HP" value greater than or equal to 1.
 
     :param board: a dictionary
-    :param character: a dictionary
+    :param character: also a dictionary
     :precondition: board must have valid X- and Y-coordinates stored as tuples
     :precondition: character has "X-coordinate", "Y-coordinate", and "Current HP" keys with integer values
     :postcondition: determine if character made it to the end of the board with at least 1 HP or more
-    :return: a Boolean value indicating if character has attained the goal of finishing the game
+    :return: boolean value indicating if character has attained the goal of finishing the game
 
     >>> board_example_one = make_board(5, 5)
     >>> character_example_one = {"X-coordinate": 0, "Y-coordinate": 0, "Current HP": 5, "Level": 1, "XP": 0}
@@ -663,7 +663,7 @@ def is_alive(character: dict[str, int]) -> bool:
     :param character: a dictionary
     :precondition: character has a "Current HP" key with a positive integer value including 0
     :postcondition: determine whether character is alive with at least 1 HP or more
-    :return: a Boolean value validating if character is alive or not
+    :return: boolean value validating if character is alive or not
 
     >>> character_example_one = {"X-coordinate": 1, "Y-coordinate": 1, "Current HP": 5, "Level": 1, "XP": 0}
     >>> is_alive(character_example_one)
