@@ -102,7 +102,15 @@ def make_hard_board_coordinates(rows: int, columns: int) -> dict[tuple[int, int]
     >>> make_hard_board_coordinates(rows_5, columns_5)
     {(0, 4): 'Hard', (1, 4): 'Hard', (2, 4): 'Hard', (3, 3): 'Hard', (4, 2): 'Hard'}
     """
-    pass
+    hard_board_dictionary = {}
+
+    for row_coordinate in range(rows):
+        for column_coordinate in range(columns):
+            if (row_coordinate <= 2 and column_coordinate == 4) \
+                    or (row_coordinate == 3 and column_coordinate == 3) \
+                    or (row_coordinate == 4 and column_coordinate == 2):
+                hard_board_dictionary[(row_coordinate, column_coordinate)] = "Hard"
+    return hard_board_dictionary
 
 
 # def make_board(rows: int, columns: int) -> dict[tuple[int, int], str]:
