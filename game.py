@@ -113,6 +113,17 @@ def make_hard_board_coordinates(rows: int, columns: int) -> dict[tuple[int, int]
     return hard_board_dictionary
 
 
+def make_very_hard_board_coordinates(rows: int, columns: int) -> dict[tuple[int, int], str]:
+    """
+    Make the very hard board coordinates for the game board.
+
+    :param rows: an integer
+    :param columns: an integer
+    :precondition: rows and columns are positive non-zero integers
+    :postcondition: make the very hard board coordinates
+    :return: a dictionary with the tuple of (row, coordinate) as the key and a string level description as the value
+`   """
+
 # def make_board(rows: int, columns: int) -> dict[tuple[int, int], str]:
 #     """
 #     Create a game board with the given number of rows and columns.
