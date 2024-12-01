@@ -579,8 +579,8 @@ def show_trivia_question(topic: list[(str | list[str, str]), str, str, str], cha
     return response
 
 
-def verify_trivia_response(response: str, topic: list[(str | list[str, str]), str, str, str], character: dict[str, int]) \
-        -> dict[str, int]:
+def verify_trivia_response(response: str, topic: list[(str | list[str, str]), str, str, str],
+                           character: dict[str, int]) -> dict[str, int]:
     """
     Verify the player's response with the topic's answer at index 0.
 
