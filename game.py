@@ -147,6 +147,11 @@ def make_final_boss_board_coordinate(rows: int, columns: int) -> dict[tuple[int,
     :precondition: rows and columns are positive non-zero integers
     :postcondition: make the final boss board coordinate
     :return: a dictionary with the tuple of (row, coordinate) as the key and a string level description as the value
+
+    >>> rows_5 = 5
+    >>> columns_5 = 5
+    >>> make_final_boss_board_coordinate(rows_5, columns_5)
+    {(4, 4): 'Final Boss'}
     """
 
 # def make_board(rows: int, columns: int) -> dict[tuple[int, int], str]:
