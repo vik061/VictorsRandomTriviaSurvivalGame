@@ -153,6 +153,13 @@ def make_final_boss_board_coordinate(rows: int, columns: int) -> dict[tuple[int,
     >>> make_final_boss_board_coordinate(rows_5, columns_5)
     {(4, 4): 'Final Boss'}
     """
+    final_boss_board_dictionary = {}
+
+    for row_coordinate in range(rows):
+        for column_coordinate in range(columns):
+            if row_coordinate == 4 and column_coordinate == 4:
+                final_boss_board_dictionary[(row_coordinate, column_coordinate)] = "Final Boss"
+    return final_boss_board_dictionary
 
 # def make_board(rows: int, columns: int) -> dict[tuple[int, int], str]:
 #     """
