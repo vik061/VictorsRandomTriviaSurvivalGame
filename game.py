@@ -29,60 +29,73 @@ def print_game_intro_and_instructions() -> None:
     time.sleep(2)
 
 
-def make_board(rows: int, columns: int) -> dict[tuple[int, int], str]:
+def make_start_and_easy_board_coordinates(rows: int, columns: int) -> dict[tuple[int, int], str]:
     """
-    Create a game board with the given number of rows and columns.
-
-    Each coordinate on the board has a string describing the difficulty level.
-    For my game, assume that the game board will have 5 rows and 5 columns.
+    Make the start and easy board coordinates for the game board.
 
     :param rows: an integer
-    :param columns: an integer
-    :precondition: rows and columns must be positive non-zero integers
-    :precondition: for the purpose of my game, rows and columns must be less than or equal to five
-    :postcondition: create a game board with the given number of rows and columns
-    :return: a dictionary with each key as a tuple with a set of coordinates, and
-    each value as a short string description of the difficulty level
-
-    >>> rows_example_one = 1
-    >>> columns_example_one = 1
-    >>> board = make_board(rows_example_one, columns_example_one)
-    >>> board
-    {(0, 0): 'Start (no difficulty level)'}
-    >>> rows_example_two = 2
-    >>> columns_example_two = 2
-    >>> board = make_board(rows_example_two, columns_example_two)
-    >>> board
-    {(0, 0): 'Start (no difficulty level)', (0, 1): 'Easy', (1, 0): 'Easy', (1, 1): 'Easy'}
+    :params columns: an integer
+    :precondition: rows and columns are positive non-zero integers
+    :postcondition: make the start and easy board coordinates
+    :return: a dictionary with the tuple of (row, coordinate) as the key and a string level description as the value
     """
-    board_dictionary = {}
-    board_difficulty_levels_list = ['Start (no difficulty level)', 'Easy', 'Medium', 'Hard', 'Very Hard', 'Final Boss']
+    pass
 
-    for row_coordinate in range(rows):
-        for column_coordinate in range(columns):
-            if row_coordinate == 0 and column_coordinate == 0:
-                board_dictionary[(row_coordinate, column_coordinate)] = board_difficulty_levels_list[0]
-            elif (row_coordinate == 0 and column_coordinate <= 3) \
-                    or (row_coordinate == 1 and column_coordinate <= 2) \
-                    or (row_coordinate == 2 and column_coordinate <= 1):
-                board_dictionary[(row_coordinate, column_coordinate)] = board_difficulty_levels_list[1]
-            elif (row_coordinate == 0 and column_coordinate == 4) \
-                    or (row_coordinate == 1 and column_coordinate == 3) \
-                    or (row_coordinate == 2 and 2 <= column_coordinate <= 3) \
-                    or (row_coordinate == 3 and column_coordinate <= 2) \
-                    or (row_coordinate == 4 and column_coordinate <= 1):
-                board_dictionary[(row_coordinate, column_coordinate)] = board_difficulty_levels_list[2]
-            elif (row_coordinate <= 2 and column_coordinate == 4) \
-                    or (row_coordinate == 3 and column_coordinate == 3) \
-                    or (row_coordinate == 4 and column_coordinate == 2):
-                board_dictionary[(row_coordinate, column_coordinate)] = board_difficulty_levels_list[3]
-            elif (row_coordinate == 3 and column_coordinate == 4) \
-                    or (row_coordinate == 4 and column_coordinate == 3):
-                board_dictionary[(row_coordinate, column_coordinate)] = board_difficulty_levels_list[4]
-            elif row_coordinate == 4 and column_coordinate == 4:
-                board_dictionary[(row_coordinate, column_coordinate)] = board_difficulty_levels_list[5]
 
-    return board_dictionary
+# def make_board(rows: int, columns: int) -> dict[tuple[int, int], str]:
+#     """
+#     Create a game board with the given number of rows and columns.
+#
+#     Each coordinate on the board has a string describing the difficulty level.
+#     For my game, assume that the game board will have 5 rows and 5 columns.
+#
+#     :param rows: an integer
+#     :param columns: an integer
+#     :precondition: rows and columns must be positive non-zero integers
+#     :precondition: for the purpose of my game, rows and columns must be less than or equal to five
+#     :postcondition: create a game board with the given number of rows and columns
+#     :return: a dictionary with each key as a tuple with a set of coordinates, and
+#     each value as a short string description of the difficulty level
+#
+#     >>> rows_example_one = 1
+#     >>> columns_example_one = 1
+#     >>> board = make_board(rows_example_one, columns_example_one)
+#     >>> board
+#     {(0, 0): 'Start (no difficulty level)'}
+#     >>> rows_example_two = 2
+#     >>> columns_example_two = 2
+#     >>> board = make_board(rows_example_two, columns_example_two)
+#     >>> board
+#     {(0, 0): 'Start (no difficulty level)', (0, 1): 'Easy', (1, 0): 'Easy', (1, 1): 'Easy'}
+#     """
+#     board_dictionary = {}
+#     board_difficulty_levels_list = ['Start (no difficulty level)', 'Easy', 'Medium', 'Hard', 'Very Hard', 'Final Boss']
+#
+#     for row_coordinate in range(rows):
+#         for column_coordinate in range(columns):
+#             if row_coordinate == 0 and column_coordinate == 0:
+#                 board_dictionary[(row_coordinate, column_coordinate)] = board_difficulty_levels_list[0]
+#             elif (row_coordinate == 0 and column_coordinate <= 3) \
+#                     or (row_coordinate == 1 and column_coordinate <= 2) \
+#                     or (row_coordinate == 2 and column_coordinate <= 1):
+#                 board_dictionary[(row_coordinate, column_coordinate)] = board_difficulty_levels_list[1]
+#             elif (row_coordinate == 0 and column_coordinate == 4) \
+#                     or (row_coordinate == 1 and column_coordinate == 3) \
+#                     or (row_coordinate == 2 and 2 <= column_coordinate <= 3) \
+#                     or (row_coordinate == 3 and column_coordinate <= 2) \
+#                     or (row_coordinate == 4 and column_coordinate <= 1):
+#                 board_dictionary[(row_coordinate, column_coordinate)] = board_difficulty_levels_list[2]
+#             elif (row_coordinate <= 2 and column_coordinate == 4) \
+#                     or (row_coordinate == 3 and column_coordinate == 3) \
+#                     or (row_coordinate == 4 and column_coordinate == 2):
+#                 board_dictionary[(row_coordinate, column_coordinate)] = board_difficulty_levels_list[3]
+#             elif (row_coordinate == 3 and column_coordinate == 4) \
+#                     or (row_coordinate == 4 and column_coordinate == 3):
+#                 board_dictionary[(row_coordinate, column_coordinate)] = board_difficulty_levels_list[4]
+#             elif row_coordinate == 4 and column_coordinate == 4:
+#                 board_dictionary[(row_coordinate, column_coordinate)] = board_difficulty_levels_list[5]
+#
+#     return board_dictionary
 
 
 def make_character() -> dict[str, int]:
