@@ -58,6 +58,24 @@ def make_start_and_easy_board_coordinates(rows: int, columns: int) -> dict[tuple
     return start_and_easy_board_dictionary
 
 
+def make_medium_board_coordinates(rows: int, columns: int) -> dict[tuple[int, int], str]:
+    """
+    Make the medium board coordinates for the game board.
+
+    :param rows: an integer
+    :params columns: an integer
+    :precondition: rows and columns are positive non-zero integers
+    :postcondition: make the medium board coordinates
+    :return: a dictionary with the tuple of (row, coordinate) as the key and a string level description as the value
+
+    >>> rows_5 = 5
+    >>> columns_5 = 5
+    >>> make_medium_board_coordinates(rows_5, columns_5)
+    {(0, 4): 'Medium', (1, 3): 'Medium', (2, 2): 'Medium', (2, 3): 'Medium', (3, 0): 'Medium', (3, 1): 'Medium', \
+(3, 2): 'Medium', (4, 0): 'Medium', (4, 1): 'Medium'}
+    """
+    pass
+
 # def make_board(rows: int, columns: int) -> dict[tuple[int, int], str]:
 #     """
 #     Create a game board with the given number of rows and columns.
