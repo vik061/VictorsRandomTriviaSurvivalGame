@@ -43,9 +43,19 @@ def make_start_and_easy_board_coordinates(rows: int, columns: int) -> dict[tuple
     >>> columns_5 = 5
     >>> make_start_and_easy_board_coordinates(rows_5, columns_5)
     {(0, 0): 'Start (no difficulty level)', (0, 1): 'Easy', (0, 2): 'Easy', (0, 3): 'Easy', (1, 0): 'Easy', \
-    (1, 1): 'Easy', (1, 2): 'Easy', (2, 0): 'Easy', (2, 1): 'Easy'}
+(1, 1): 'Easy', (1, 2): 'Easy', (2, 0): 'Easy', (2, 1): 'Easy'}
     """
-    pass
+    start_and_easy_board_dictionary = {}
+
+    for row_coordinate in range(rows):
+        for column_coordinate in range(columns):
+            if row_coordinate == 0 and column_coordinate == 0:
+                start_and_easy_board_dictionary[(row_coordinate, column_coordinate)] = "Start (no difficulty level)"
+            elif (row_coordinate == 0 and column_coordinate <= 3) \
+                    or (row_coordinate == 1 and column_coordinate <= 2) \
+                    or (row_coordinate == 2 and column_coordinate <= 1):
+                start_and_easy_board_dictionary[(row_coordinate, column_coordinate)] = "Easy"
+    return start_and_easy_board_dictionary
 
 
 # def make_board(rows: int, columns: int) -> dict[tuple[int, int], str]:
