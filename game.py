@@ -71,8 +71,8 @@ def make_medium_board_coordinates(rows: int, columns: int) -> dict[tuple[int, in
     >>> rows_5 = 5
     >>> columns_5 = 5
     >>> make_medium_board_coordinates(rows_5, columns_5)
-    {(0, 4): 'Medium', (1, 3): 'Medium', (2, 2): 'Medium', (2, 3): 'Medium', (3, 0): 'Medium', (3, 1): 'Medium', \
-(3, 2): 'Medium', (4, 0): 'Medium', (4, 1): 'Medium'}
+    {(0, 4): 'Medium', (1, 3): 'Medium', (2, 2): 'Medium', (2, 3): 'Medium', (3, 0): 'Medium', (3, 1): 'Medium',\
+ (3, 2): 'Medium', (4, 0): 'Medium', (4, 1): 'Medium'}
     """
     pass
 
