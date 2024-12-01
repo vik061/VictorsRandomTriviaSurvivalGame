@@ -34,7 +34,7 @@ def make_start_and_easy_board_coordinates(rows: int, columns: int) -> dict[tuple
     Make the start and easy board coordinates for the game board.
 
     :param rows: an integer
-    :params columns: an integer
+    :param columns: an integer
     :precondition: rows and columns are positive non-zero integers
     :postcondition: make the start and easy board coordinates
     :return: a dictionary with the tuple of (row, coordinate) as the key and a string level description as the value
@@ -63,7 +63,7 @@ def make_medium_board_coordinates(rows: int, columns: int) -> dict[tuple[int, in
     Make the medium board coordinates for the game board.
 
     :param rows: an integer
-    :params columns: an integer
+    :param columns: an integer
     :precondition: rows and columns are positive non-zero integers
     :postcondition: make the medium board coordinates
     :return: a dictionary with the tuple of (row, coordinate) as the key and a string level description as the value
