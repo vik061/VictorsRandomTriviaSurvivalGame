@@ -17,14 +17,14 @@ class Test(TestCase):
         rows = 5
         columns = 5
         actual = make_start_and_easy_board_coordinates(rows, columns)
-        self.assertTrue(expected in actual)
+        self.assertTrue(expected in actual.values())
 
     def test_make_start_and_easy_board_coordinates_has_easy_string(self):
         expected = 'Easy'
         rows = 5
         columns = 5
         actual = make_start_and_easy_board_coordinates(rows, columns)
-        self.assertTrue(expected in actual)
+        self.assertTrue(expected in actual.values())
 
     def test_make_start_and_easy_board_coordinates_has_start_coordinate(self):
         expected = (0, 0)
