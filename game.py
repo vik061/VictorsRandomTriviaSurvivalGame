@@ -122,7 +122,12 @@ def make_very_hard_board_coordinates(rows: int, columns: int) -> dict[tuple[int,
     :precondition: rows and columns are positive non-zero integers
     :postcondition: make the very hard board coordinates
     :return: a dictionary with the tuple of (row, coordinate) as the key and a string level description as the value
-`   """
+`
+    >>> rows_5 = 5
+    >>> columns_5 = 5
+    >>> make_very_hard_board_coordinates(rows_5, columns_5)
+    {(3, 4): 'Very Hard', (4, 3): 'Very Hard'}
+    """
 
 # def make_board(rows: int, columns: int) -> dict[tuple[int, int], str]:
 #     """
