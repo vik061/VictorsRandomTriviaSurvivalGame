@@ -1,3 +1,4 @@
+import itertools
 import random
 
 import time
@@ -45,17 +46,17 @@ def make_start_and_easy_board_coordinates(rows: int, columns: int) -> dict[tuple
     {(0, 0): 'Start (no difficulty level)', (0, 1): 'Easy', (0, 2): 'Easy', (0, 3): 'Easy', (1, 0): 'Easy', \
 (1, 1): 'Easy', (1, 2): 'Easy', (2, 0): 'Easy', (2, 1): 'Easy'}
     """
-    start_and_easy_board_dictionary = {}
+    start_board_dictionary = {(row_coordinate, column_coordinate): "Start (no difficulty level)"
+                              for row_coordinate in range(rows) for column_coordinate in range(columns)
+                              if (row_coordinate == 0 and column_coordinate == 0)}
 
-    for row_coordinate in range(rows):
-        for column_coordinate in range(columns):
-            if row_coordinate == 0 and column_coordinate == 0:
-                start_and_easy_board_dictionary[(row_coordinate, column_coordinate)] = "Start (no difficulty level)"
-            elif (row_coordinate == 0 and column_coordinate <= 3) \
-                    or (row_coordinate == 1 and column_coordinate <= 2) \
-                    or (row_coordinate == 2 and column_coordinate <= 1):
-                start_and_easy_board_dictionary[(row_coordinate, column_coordinate)] = "Easy"
-    return start_and_easy_board_dictionary
+    easy_board_dictionary = {(row_coordinate, column_coordinate): "Easy" for row_coordinate in range(rows)
+                             for column_coordinate in range(columns)
+                             if (row_coordinate == 0 and 1 <= column_coordinate <= 3)
+                             or (row_coordinate == 1 and column_coordinate <= 2)
+                             or (row_coordinate == 2 and column_coordinate <= 1)}
+
+    return dict(itertools.chain(start_board_dictionary.items(), easy_board_dictionary.items()))
 
 
 def make_medium_board_coordinates(rows: int, columns: int) -> dict[tuple[int, int], str]:
