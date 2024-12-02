@@ -74,16 +74,14 @@ def make_medium_board_coordinates(rows: int, columns: int) -> dict[tuple[int, in
     {(0, 4): 'Medium', (1, 3): 'Medium', (2, 2): 'Medium', (2, 3): 'Medium', (3, 0): 'Medium', (3, 1): 'Medium',\
  (3, 2): 'Medium', (4, 0): 'Medium', (4, 1): 'Medium'}
     """
-    medium_board_dictionary = {}
+    medium_board_dictionary = {(row_coordinate, column_coordinate): "Medium" for row_coordinate in range(rows)
+                               for column_coordinate in range(columns)
+                               if (row_coordinate == 0 and column_coordinate == 4)
+                               or (row_coordinate == 1 and column_coordinate == 3)
+                               or (row_coordinate == 2 and 2 <= column_coordinate <= 3)
+                               or (row_coordinate == 3 and column_coordinate <= 2)
+                               or (row_coordinate == 4 and column_coordinate <= 1)}
 
-    for row_coordinate in range(rows):
-        for column_coordinate in range(columns):
-            if (row_coordinate == 0 and column_coordinate == 4) \
-                    or (row_coordinate == 1 and column_coordinate == 3) \
-                    or (row_coordinate == 2 and 2 <= column_coordinate <= 3) \
-                    or (row_coordinate == 3 and column_coordinate <= 2) \
-                    or (row_coordinate == 4 and column_coordinate <= 1):
-                medium_board_dictionary[(row_coordinate, column_coordinate)] = "Medium"
     return medium_board_dictionary
 
 
