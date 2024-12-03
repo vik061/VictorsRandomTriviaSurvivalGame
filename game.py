@@ -177,9 +177,10 @@ def make_board(rows: int, columns: int) -> dict[tuple[int, int], str]:
 (1, 4): 'Hard', (2, 4): 'Hard', (3, 3): 'Hard', (4, 2): 'Hard', (3, 4): 'Very Hard', (4, 3): 'Very Hard', \
 (4, 4): 'Final Boss'}
     """
-    board_dictionary = make_start_and_easy_board_coordinates(rows, columns) | \
-                       make_medium_board_coordinates(rows, columns) | make_hard_board_coordinates(rows, columns) | \
-                       make_very_hard_board_coordinates(rows, columns) | make_final_boss_board_coordinate(rows, columns)
+    board_dictionary = (make_start_and_easy_board_coordinates(rows, columns) |
+                        make_medium_board_coordinates(rows, columns) | make_hard_board_coordinates(rows, columns) |
+                        make_very_hard_board_coordinates(rows, columns) |
+                        make_final_boss_board_coordinate(rows, columns))
     return board_dictionary
 
 
@@ -702,7 +703,7 @@ def game():  # called from main
     """
     Play the game.
     """
-    print_game_intro_and_instructions()
+    # print_game_intro_and_instructions()
     rows = 5
     columns = 5
     board = make_board(rows, columns)
