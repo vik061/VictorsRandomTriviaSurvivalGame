@@ -5,7 +5,7 @@ from game import trivia_topics
 
 class Test(TestCase):
     def test_trivia_topics_easy_trivia_in_trivia_list(self):
-        provinces = [{'d', 'D'},
+        provinces = [['d', 'D'],
                      ("Which Canadian province(s) have I not visited as of November 2024?\n"
                       "a. Quebec\n"
                       "b. Saskatchewan\n"
@@ -21,7 +21,7 @@ class Test(TestCase):
         self.assertTrue(expected in easy_list)
 
     def test_trivia_topics_medium_trivia_in_trivia_list(self):
-        soil = [{'f', 'F'},
+        soil = [['f', 'F'],
                 "Choose T (True) or F (False) for the following statement:\nSoil is the same thing as dirt.\n",
                 "Level 2 Hint: Think about where you find soil versus dirt.\n",
                 "Level 3 Hint: Soil is a natural layer of earth often found with living plants and organisms. Does dirt"
@@ -32,7 +32,7 @@ class Test(TestCase):
         self.assertTrue(expected in medium_list)
 
     def test_trivia_topics_hard_trivia_in_trivia_list(self):
-        crows = [{'d', 'D'},
+        crows = [['d', 'D'],
                  ("Which family do crows belong to?\n"
                   "a. Coraciiformes\n"
                   "b. Birdae\n"
@@ -46,7 +46,7 @@ class Test(TestCase):
         self.assertTrue(expected in hard_list)
 
     def test_trivia_topics_very_hard_trivia_in_trivia_list(self):
-        le_sserafim = [{'b', 'B'},
+        le_sserafim = [['b', 'B'],
                        (
                            "Le Sserafim is a (formerly six) five-member K-pop girl group under Source Music, "
                            "a subsidiary of which entertainment company?\n"
