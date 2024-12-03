@@ -1,6 +1,5 @@
 import itertools
 import random
-
 import time
 
 
@@ -718,6 +717,8 @@ def game():  # called from main
             move_character(character)
             trivia_level = describe_current_location(board, character)
             print("\nDifficulty: " + trivia_level + "\n")
+            if trivia_level == "Start (no difficulty level)":
+                continue
             trivia_topics()  # gather trivia topics
             random_topic = choose_trivia_topic(trivia_level)
             player_response = show_trivia_question(random_topic, character)
