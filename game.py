@@ -14,7 +14,7 @@ def print_game_intro_and_instructions() -> None:
     time.sleep(2)
     print("You may have seen tons of games in a similar format to this, BUT my game has random varieties of "
           "trivia topics, such as my personal life experiences, random choice, and more niche/specific topics. "
-          "Each of those topics have difficulty levels anywhere from Easy to Final Boss (almost impossible unless you "
+          "Each of those topics has difficulty levels anywhere from Easy to Final Boss (almost impossible unless you "
           "know me very well).\n\n")
     time.sleep(8)
     print("For every trivia topic, gain 1 XP every time you answer correctly or lose 1 HP every time you answer "
