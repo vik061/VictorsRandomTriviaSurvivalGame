@@ -703,7 +703,7 @@ def game():  # called from main
     """
     Play the game.
     """
-    # print_game_intro_and_instructions()
+    print_game_intro_and_instructions()
     rows = 5
     columns = 5
     board = make_board(rows, columns)
